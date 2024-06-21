@@ -1,0 +1,24 @@
+@import url("../fonts.css");
+
+.Title-container {
+  display: flex;
+  font-family: "Supreme", sans-serif;
+  justify-content: center;
+  align-items: center;
+  padding: 2vmin;
+  margin-bottom: 10vmin;
+  width: 100%;
+  max-width: 80vmin;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 0.8vmin;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Title {
+  font-size: 5.5em;
+  background-image: url("../../public/bg.gif");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.25em;
+}
