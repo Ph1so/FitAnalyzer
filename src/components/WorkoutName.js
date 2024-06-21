@@ -2,23 +2,31 @@ import React, { useState } from "react";
 import "./WorkoutName.css";
 
 const WorkoutName = () => {
-  const [name, setName] = useState("");
+  const [names, setNames] = useState({
+    Mon: "",
+    Tue: "",
+    Wed: "",
+    Thu: "",
+    Fri: "",
+    Sat: "",
+    Sun: "",
+  });
   const [selectedDay, setSelectedDay] = useState("");
 
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   // Handle the input change name
   const handleInputChange = (event) => {
-    setName(event.target.value);
+    const updatedNames = { ...names, [selectedDay]: event.target.value };
+    setNames(updatedNames);
   };
 
   const handleButtonClick = (day) => {
     setSelectedDay(day);
   };
-  // TDOD: add days of week
-  // TODO: user enters name and it saves to day
+
   return (
-    <div>
+    <div className="parent-container">
       <div className="days-container">
         {days.map((day) => (
           <button
@@ -30,13 +38,15 @@ const WorkoutName = () => {
           </button>
         ))}
       </div>
-      <input
-        className="WorkoutName-input"
-        type="text"
-        placeholder="Enter workout name"
-        value={name}
-        onChange={handleInputChange}
-      />
+      {selectedDay && (
+        <input
+          className="WorkoutName-input"
+          type="text"
+          placeholder="Name"
+          value={names[selectedDay]}
+          onChange={handleInputChange}
+        />
+      )}
     </div>
   );
 };

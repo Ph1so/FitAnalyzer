@@ -1,19 +1,28 @@
 @import url(../fonts.css);
 
-/* Styling for the container of the buttons */
-.days-container {
+/* Parent container to center the days-container */
+.parent-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* Spacing between buttons */
+  flex-direction: column;
+  height: 25vh; /* Optional: This makes sure the container takes full viewport height */
+}
+
+.days-container {
+  margin-bottom: 5vmin;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
 }
 
 /* Styling for each button */
 .day-button {
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: transparent;
   background-color: #f0f0f0;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -28,38 +37,55 @@
 
 /* Hover effect for buttons */
 .day-button:hover {
-  background-color: #e0e0e0;
+  background-color: #ad88c6;
 }
 
-.WorkoutName-input {
-  width: 100%;
-  max-width: 60vmin;
-  max-height: 30vmin;
+/* .WorkoutName-input {
+  width: 15vmin;
+  height: 5vmin;
   padding: 2vmin;
   margin-bottom: 5vmin;
   background-color: transparent;
   border-radius: 0.8vmin;
   border: transparent;
-}
+} */
 
-.WorkoutName-input input[type="text"] {
+/* .WorkoutName-input input[type="text"] {
   width: 100%;
-  height: 100%; /* Ensures the input takes up the full height of the container */
+  height: 100%;
   padding: 8px;
+  font-size: 10em;
   border: none;
   border-radius: 4px;
-  text-align: center; /* Horizontally center the text */
-  font-size: 5em; /* Adjust as needed */
+  text-align: center;
+  font-size: 5em;
   display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
-  background-color: transparent; /* Transparent background */
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
 }
 
 .WorkoutName-input input[type="text"]::placeholder {
-  color: #ccc; /* Placeholder text color */
-  text-align: center; /* Horizontally center the placeholder text */
+  font-size: 50em;
+  color: #ccc;
+  text-align: center;
   display: flex;
-  align-items: center; /* Vertically center the placeholder text */
-  justify-content: center; /* Horizontally center the placeholder text */
+  align-items: center;
+  justify-content: center;
+} */
+
+.WorkoutName-input {
+  width: 50vmin;
+  height: 5vmax;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 3.5em; /* Adjust font-size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5vmin auto; /* Center horizontally and set bottom margin */
+  background-color: transparent;
+  color: #7469b6;
 }
