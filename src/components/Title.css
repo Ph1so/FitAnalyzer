@@ -8,14 +8,15 @@
   padding: 2vmin;
   margin-bottom: 10vmin;
   width: 100%;
-  max-width: 80vmin;
-  background-color: hsl(0, 0%, 98%);
+  max-width: 60vmin;
+  /* background-color: hsl(0, 0%, 98%); */
+  background-color: transparent;
   border-radius: 0.8vmin;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
 .Title {
   font-size: 5.5em;
-  background-image: url("../../public/bg.gif");
+  background-color: #7469b6;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
