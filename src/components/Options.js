@@ -41,6 +41,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </select>
+            {/* is this the last exercise? yes = render "Add", no = render "Remove" */}
             {index === exercises.length - 1 ? (
               <button className="Add-Workout" onClick={addExercise}>
                 Add

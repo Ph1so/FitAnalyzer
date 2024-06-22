@@ -6,11 +6,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 25vh; /* Optional: This makes sure the container takes full viewport height */
+  height: auto; /* Optional: This makes sure the container takes full viewport height */
 }
 
 .days-container {
-  margin-bottom: 5vmin;
+  margin-bottom: 2vmin;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -39,40 +39,6 @@
 .day-button:hover {
   background-color: #ad88c6;
 }
-
-/* .WorkoutName-input {
-  width: 15vmin;
-  height: 5vmin;
-  padding: 2vmin;
-  margin-bottom: 5vmin;
-  background-color: transparent;
-  border-radius: 0.8vmin;
-  border: transparent;
-} */
-
-/* .WorkoutName-input input[type="text"] {
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  font-size: 10em;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
-  font-size: 5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.WorkoutName-input input[type="text"]::placeholder {
-  font-size: 50em;
-  color: #ccc;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
 
 .WorkoutName-input {
   max-width: 30vmin;
