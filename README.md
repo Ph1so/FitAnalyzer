@@ -1,5 +1,11 @@
-# Progress
+# Overview
 ---
+
+## Tech Stack
+Frameworks: `React`
+Languages: `JavaScript` `HTML` `CSS` `Python`
+
+## Progress
 - Ability to switch between days.
 - You can name each day. e.g. Push Day
 - Remove and Add buttons for exercises
