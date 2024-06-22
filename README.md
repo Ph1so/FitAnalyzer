@@ -3,6 +3,7 @@
 
 ## Tech Stack
 Frameworks: `React`
+
 Languages: `JavaScript` `HTML` `CSS` `Python`
 
 ## Progress
