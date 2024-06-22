@@ -16,6 +16,36 @@
   margin-bottom: 5vmin;
 }
 
+.Add-Workout {
+  font-family: "Supreme", sans-serif;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vmin;
+  background-color: transparent;
+  border: none;
+}
+
+.Add-Workout:hover {
+  /* background-color: #7469b6; */
+  color: #7469b6;
+}
+
+.Remove-Workout {
+  font-family: "Supreme", sans-serif;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vmin;
+  background-color: transparent;
+  border: none;
+}
+
+.Remove-Workout:hover {
+  /* background-color: #7469b6; */
+  color: #7469b6;
+}
+
 .Workout-choice,
 .Reps-container {
   margin-bottom: 1vmax;
