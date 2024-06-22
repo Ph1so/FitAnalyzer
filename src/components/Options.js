@@ -14,28 +14,16 @@ const Options = () => {
       </div>
       <div className="Reps-container">
         <div className="Reps">
-          <label htmlFor="reps-select">Reps:</label>
-          <select id="reps-select">
-            <option value="reps1">Reps 1</option>
-            <option value="reps2">Reps 2</option>
-            <option value="reps3">Reps 3</option>
-          </select>
+          <label htmlFor="reps-select">Reps: </label>
+          <input type="text" placeholder="Reps" id="reps-select" />
         </div>
         <div className="Sets">
-          <label htmlFor="sets-select">Sets:</label>
-          <select id="sets-select">
-            <option value="sets1">Sets 1</option>
-            <option value="sets2">Sets 2</option>
-            <option value="sets3">Sets 3</option>
-          </select>
+          <label htmlFor="sets-select">Sets: </label>
+          <input type="text" placeholder="Sets" id="sets-select" />
         </div>
         <div className="Rir">
-          <label htmlFor="rir-select">RIR:</label>
-          <select id="rir-select">
-            <option value="rir1">RIR 1</option>
-            <option value="rir2">RIR 2</option>
-            <option value="rir3">RIR 3</option>
-          </select>
+          <label htmlFor="rir-select">RIR: </label>
+          <input type="text" placeholder="RIR" id="rir-select" />
         </div>
       </div>
     </div>

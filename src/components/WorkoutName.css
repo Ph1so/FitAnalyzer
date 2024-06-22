@@ -75,13 +75,13 @@
 } */
 
 .WorkoutName-input {
-  width: 50vmin;
-  height: 5vmax;
+  max-width: 30vmin;
+  height: 4vmin;
   padding: 8px;
   border: none;
   border-radius: 4px;
   text-align: center;
-  font-size: 3.5em; /* Adjust font-size as needed */
+  font-size: 5em; /* Adjust font-size as needed */
   display: flex;
   align-items: center;
   justify-content: center;
