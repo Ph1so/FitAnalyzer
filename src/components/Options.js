@@ -47,7 +47,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 Add
               </button>
             ) : (
-              <button
+              <button style={{ display: 'inline-block' }}
                 className="Remove-Workout"
                 onClick={() => removeExercise(index)}
               >
