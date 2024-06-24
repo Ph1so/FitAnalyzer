@@ -30,7 +30,9 @@ const Options = ({ exercises, onExercisesChange }) => {
       {exercises.map((exercise, index) => (
         <div className="Option-container" key={index}>
           <div className="Workout-choice">
-            <label htmlFor={`workout-select-${index}`}>Workout Choice:</label>
+            <label htmlFor={`workout-select-${index}`}>
+              Exercise #{index + 1}:
+            </label>
             <select
               id={`workout-select-${index}`}
               value={exercise.workout}
@@ -47,7 +49,8 @@ const Options = ({ exercises, onExercisesChange }) => {
                 Add
               </button>
             ) : (
-              <button style={{ display: 'inline-block' }}
+              <button
+                style={{ display: "inline-block" }}
                 className="Remove-Workout"
                 onClick={() => removeExercise(index)}
               >
