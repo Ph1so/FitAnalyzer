@@ -15,7 +15,7 @@ def get_exercises(muscle):
 
 def main():
     configure()
-    get_exercises('biceps')
+    get_exercises('incline hammer curls')
 
 
 main()
