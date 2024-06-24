@@ -2,6 +2,8 @@ import React from "react";
 import "./Options.css";
 
 const Options = ({ exercises, onExercisesChange }) => {
+  const optionsList = ["apple", "orange", "banana"];
+
   const addExercise = () => {
     const updatedExercises = [
       ...exercises,
@@ -39,9 +41,11 @@ const Options = ({ exercises, onExercisesChange }) => {
               onChange={(e) => handleChange(index, "workout", e.target.value)}
             >
               <option value="">Select an option</option>
-              <option value="option1">Option 1</option>
-              <option value="option2">Option 2</option>
-              <option value="option3">Option 3</option>
+              {optionsList.map((option, optionIndex) => (
+                <option key={optionIndex} value={option}>
+                  {option}
+                </option>
+              ))}
             </select>
             {/* is this the last exercise? yes = render "Add", no = render "Remove" */}
             {index === exercises.length - 1 ? (
