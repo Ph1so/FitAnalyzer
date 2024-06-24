@@ -1,4 +1,3 @@
-/* Options.css */
 @import url("../fonts.css");
 
 .Option-container {
@@ -12,6 +11,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 60vmin;
   height: 20vmin;
+  min-height: 15vmin; /* Set a minimum height */
+  max-height: 50vmin; /* Set a maximum height */
   margin: 0 auto;
   margin-top: 3vmin;
 }
@@ -27,7 +28,6 @@
 }
 
 .Add-Workout:hover {
-  /* background-color: #7469b6; */
   color: #7469b6;
 }
 
@@ -42,7 +42,6 @@
 }
 
 .Remove-Workout:hover {
-  /* background-color: #7469b6; */
   color: #7469b6;
 }
 
@@ -89,4 +88,34 @@ input[type="text"] {
 
 input[type="text"]::placeholder {
   color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .Option-container {
+    height: 30vmin;
+  }
+  select,
+  input[type="text"] {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Option-container {
+    height: 35vmin;
+  }
+  select,
+  input[type="text"] {
+    width: 40%;
+  }
+}
+
+@media (max-width: 320px) {
+  .Option-container {
+    height: 40vmin;
+  }
+  select,
+  input[type="text"] {
+    width: 30%;
+  }
 }
