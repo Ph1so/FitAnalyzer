@@ -201,7 +201,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               value={exercise.workout}
               onChange={(e) => handleChange(index, "workout", e.target.value)}
             >
-              <option value="">Select an option</option>
+              <option value="">hello</option>
               {optionsList.map((option, optionIndex) => (
                 <option key={optionIndex} value={option}>
                   {option}
