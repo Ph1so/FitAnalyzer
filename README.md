@@ -10,6 +10,8 @@ Frameworks: `React`
 
 ## Progress
 
+Currently works as a weekly workout planner. User auth and workout analysis in progress.
+
 - Ability to switch between days.
 - You can name each day, e.g. Push Day
 - Remove and Add buttons for exercises
