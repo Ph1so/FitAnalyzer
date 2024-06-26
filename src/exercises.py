@@ -22,28 +22,17 @@ def get_exercises(muscle):
 
 def main():
     configure()
-    #abdominals abductors adductors biceps calves chest forearms glutes hamstrings lats lower_back middle_back neck quadriceps traps triceps
-    exercise_names_abdominals = get_exercises('abdominals')
-    exercise_names_abductors = get_exercises('abductors')
-    exercise_names_adductors = get_exercises('adductors')
-    exercise_names_biceps = get_exercises('biceps')
-    exercise_names_calves = get_exercises('calves')
-    exercise_names_chest = get_exercises('chest')
-    exercise_names_forearms = get_exercises('forearms')
-    exercise_names_glutes = get_exercises('glutes')
-    exercise_names_hamstrings = get_exercises('hamstrings')
-    exercise_names_lats = get_exercises('lats')
-    exercise_names_lower_back = get_exercises('lower_back')
-    exercise_names_middle_back = get_exercises('middle_back')
-    exercise_names_neck = get_exercises('neck')
-    exercise_names_quadriceps = get_exercises('quadriceps')
-    exercise_names_traps = get_exercises('traps')
-    exercise_names_triceps = get_exercises('triceps')
+    muscleGroups = [
+        'abdominals', 'abductors', 'adductors', 'biceps', 'calves', 
+        'chest', 'forearms', 'glutes', 'hamstrings', 'lats', 
+        'lower_back', 'middle_back', 'neck', 'quadriceps', 'traps', 'triceps'
+    ]
+    exerciseNames = []
+    for muscle in muscleGroups:
+        exerciseNames.extend(get_exercises(muscle))  # Use extend to add individual names
 
-
-    exercise_names = exercise_names_abdominals + exercise_names_abductors + exercise_names_adductors + exercise_names_biceps + exercise_names_calves + exercise_names_chest + exercise_names_forearms + exercise_names_glutes   + exercise_names_hamstrings + exercise_names_lats + exercise_names_lower_back + exercise_names_middle_back + exercise_names_neck + exercise_names_quadriceps + exercise_names_traps + exercise_names_triceps 
-
-    print("Exercises:", exercise_names)
+    print(exerciseNames)
+    print(len(exerciseNames))
 
 if __name__ == "__main__":
     main()
