@@ -20,7 +20,7 @@ def get_exercises(muscle):
         print(f"Error: {response.status_code} - {response.text}")
         return []
 
-def main():
+def getNames():
     configure()
     muscleGroups = [
         'abdominals', 'abductors', 'adductors', 'biceps', 'calves', 
@@ -31,8 +31,11 @@ def main():
     for muscle in muscleGroups:
         exerciseNames.extend(get_exercises(muscle))  # Use extend to add individual names
 
-    print(exerciseNames)
-    print(len(exerciseNames))
+    return exerciseNames
+
+def main():
+    configure()
+    
 
 if __name__ == "__main__":
     main()
