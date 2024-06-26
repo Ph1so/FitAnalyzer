@@ -11,7 +11,7 @@ def configure():
 
 def get_exercises(muscle):
     api_url = f'https://api.api-ninjas.com/v1/exercises?muscle={muscle}'
-   # response = requests.get(api_url, headers={'X-Api-Key': API_KEY})
+    #response = requests.get(api_url, headers={'X-Api-Key': API_KEY})
     response = requests.get(api_url, headers={'X-Api-Key': os.getenv('api_key')})
 
     if response.status_code == requests.codes.ok:
