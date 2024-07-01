@@ -4,6 +4,23 @@ import "./Options.css";
 
 const Options = ({ exercises, onExercisesChange }) => {
   const [optionsList, setOptionsList] = useState([]);
+  const [exerciseDict, setExerciseDict] = useState({});
+  let abSets = 0;
+  let abdSets= 0;
+  let addSets = 0;
+  let bicSets = 0;
+  let calSets = 0;
+  let cheSets = 0;
+  let forSets = 0;
+  let gluSets = 0;
+  let hamSets = 0;
+  let latSets = 0;
+  let lowBackSets = 0;
+  let midBackSets = 0;
+  let neckSets = 0;
+  let quadSets = 0;
+  let trapSets = 0;
+  let triSets = 0;
 
   useEffect(() => {
     const fetchNames = async () => {
@@ -39,6 +56,14 @@ const Options = ({ exercises, onExercisesChange }) => {
       return exercise;
     });
     onExercisesChange(updatedExercises);
+
+    const updatedDict = { ...exerciseDict };
+    updatedDict[updatedExercises[index].workout] = {
+      reps: updatedExercises[index].reps,
+      sets: updatedExercises[index].sets,
+    };
+    setExerciseDict(updatedDict);
+    console.log("Exercise Dictionary Updated: ", updatedDict);
   };
 
   return (
