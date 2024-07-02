@@ -4,6 +4,8 @@ import os
 
 # Load the API key from environment variables
 load_dotenv()
+#yash api key: VLZrd4JluETX99Ojr4h06w==AmFEACNadX8JYxQK
+#os.getenv('api_key')
 API_KEY = os.getenv('API_KEY', 'VLZrd4JluETX99Ojr4h06w==AmFEACNadX8JYxQK')
 
 def configure():
