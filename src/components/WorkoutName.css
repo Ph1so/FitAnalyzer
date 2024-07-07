@@ -30,14 +30,14 @@
 
 /* Styling for the selected button */
 .day-button.selected {
-  background-color: #7469b6; /* Highlight color */
+  background-color: #9692fe; /* Highlight color */
   color: #fff;
-  border-color: #7469b6;
+  border-color: #9692fe;
 }
 
 /* Hover effect for buttons */
 .day-button:hover {
-  background-color: #ad88c6;
+  background-color: #7469b6;
 }
 
 .WorkoutName-input {
@@ -53,5 +53,5 @@
   justify-content: center;
   /* margin: 0 auto 5vmin auto;*/
   background-color: transparent;
-  color: #7469b6;
+  color: #9692fe;
 }
