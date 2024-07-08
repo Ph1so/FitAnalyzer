@@ -3,27 +3,17 @@ import pluginJs from "@eslint/js";
 import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 import { fixupConfigRules } from "@eslint/compat";
 
-export default {
-  files: ["**/*.{js,mjs,cjs,jsx}"],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+export default [
+  { files: ["**/*.{js,mjs}"] },
+  { languageOptions: { parserOptions: { ecmaFeatures: { jsx: true } } } },
+  { languageOptions: { globals: globals.browser } },
+  pluginJs.configs.recommended,
+  ...fixupConfigRules(pluginReactConfig),
+  {
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
   },
-  globals: {
-    ...globals.browser,
-  },
-  extends: [
-    "plugin:react/recommended",
-    "eslint:recommended",
-    "plugin:@eslint/recommended",
-  ],
-  rules: {
-    ...fixupConfigRules(pluginReactConfig),
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-};
+];
