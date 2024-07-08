@@ -4,9 +4,9 @@
 
 ## Tech Stack
 
-Languages: `JavaScript` `HTML` `CSS` `Python`
+Languages: `JavaScript` `HTML` `CSS`
 
-Frameworks: `React`
+Frameworks: `React` `Node` `Express` `Passport`
 
 ## Progress
 
