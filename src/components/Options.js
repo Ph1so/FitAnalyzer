@@ -3,11 +3,16 @@ import axios from "axios";
 import "./Options.css";
 
 const Options = ({ exercises, onExercisesChange }) => {
+  // dynamically fetch the names from the database - Flask + python is used to get data using api key -> axios is used to fetch data from python
+  // TODO: use axios only - replace flask + python with axios
   const [optionsList, setOptionsList] = useState([]);
 
+  // only occurs once when the component is mounted
   useEffect(() => {
     const fetchNames = async () => {
+      // try catch used for error handling
       try {
+        // fetch the data from the python server
         const response = await axios.get("http://localhost:5001/api/names");
         setOptionsList(response.data);
       } catch (error) {
@@ -31,6 +36,7 @@ const Options = ({ exercises, onExercisesChange }) => {
     onExercisesChange(updatedExercises);
   };
 
+  // TODO: not the best name
   const handleChange = (index, field, value) => {
     const updatedExercises = exercises.map((exercise, i) => {
       if (i === index) {
