@@ -1,3 +1,4 @@
+import React from "react";
 import "./index.css";
 import Title from "./components/Title";
 import WorkoutName from "./components/WorkoutName";
