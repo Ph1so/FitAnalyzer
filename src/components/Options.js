@@ -118,6 +118,8 @@ const Options = ({ exercises, onExercisesChange }) => {
     </div>
   );
 };
+var test_lint;
+test_lint += 1;
 
 Options.propTypes = {
   exercises: PropTypes.arrayOf(
