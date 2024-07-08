@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 import "./Options.css";
 
 const Options = ({ exercises, onExercisesChange }) => {
@@ -36,7 +37,6 @@ const Options = ({ exercises, onExercisesChange }) => {
     onExercisesChange(updatedExercises);
   };
 
-  // TODO: not the best name
   const handleChange = (index, field, value) => {
     const updatedExercises = exercises.map((exercise, i) => {
       if (i === index) {
@@ -117,6 +117,18 @@ const Options = ({ exercises, onExercisesChange }) => {
       ))}
     </div>
   );
+};
+
+Options.propTypes = {
+  exercises: PropTypes.arrayOf(
+    PropTypes.shape({
+      workout: PropTypes.string,
+      reps: PropTypes.string,
+      sets: PropTypes.string,
+      rir: PropTypes.string,
+    })
+  ).isRequired,
+  onExercisesChange: PropTypes.func.isRequired,
 };
 
 export default Options;
