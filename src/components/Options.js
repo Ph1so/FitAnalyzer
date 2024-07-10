@@ -217,7 +217,7 @@ const Options = ({ exercises, onExercisesChange }) => {
             </select>
             {index === exercises.length - 1 ? (
               <button className="Add-Workout" onClick={addExercise}>
-                Add
+                +
               </button>
             ) : (
               <button
@@ -225,13 +225,13 @@ const Options = ({ exercises, onExercisesChange }) => {
                 className="Remove-Workout"
                 onClick={() => removeExercise(index)}
               >
-                Remove
+                -
               </button>
             )}
           </div>
           <div className="Reps-container">
             <div className="Reps">
-              <label htmlFor={`reps-select-${index}`}>Reps: </label>
+              <label htmlFor={`reps-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="Reps"
@@ -241,7 +241,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               />
             </div>
             <div className="Sets">
-              <label htmlFor={`sets-select-${index}`}>Sets: </label>
+              <label htmlFor={`sets-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="Sets"
@@ -251,7 +251,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               />
             </div>
             <div className="Rir">
-              <label htmlFor={`rir-select-${index}`}>RIR: </label>
+              <label htmlFor={`rir-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="RIR"
