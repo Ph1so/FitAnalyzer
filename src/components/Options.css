@@ -17,6 +17,12 @@
   margin-top: 3vmin;
 }
 
+.Exercise-Number
+{
+  text-decoration: underline;
+  text-decoration-color: #7469b6;
+}
+
 .Add-Workout {
   font-family: "Supreme", sans-serif;
   font-size: large;
@@ -25,7 +31,7 @@
   margin-left: 1vmin;
   background-color: transparent;
   border: none;
-  float:right;
+  padding-left:70px;
   margin-top: 1%;
 }
 
@@ -41,7 +47,7 @@
   margin-left: 1vmin;
   background-color: transparent;
   border: none;
-  float:right;
+  padding-left:70px;
   margin-top: 1%;
 }
 
@@ -126,12 +132,12 @@ input[type="text"]::placeholder {
     width: 80%;
   }
   .Add-Workout {
-    float:right;
-    margin-top:2.5%;
+    padding-left:10px;
+    margin-top: 0%;
   }
   .Remove-Workout {
-    float:right;
-    margin-top:2.5%;
+    padding-left:10px;
+    margin-top: 0%;
   }
 }
 
@@ -147,12 +153,12 @@ input[type="text"]::placeholder {
     width: 80%;
   }
   .Add-Workout {
-    float:right;
-    margin-top:2.5%;
+    padding-left:10px;
+    margin-top: 0%;
   }
   .Remove-Workout {
-    float:right;
-    margin-top:2.5%;
+    padding-left:10px;
+    margin-top: 0%;
   }
 }
 
