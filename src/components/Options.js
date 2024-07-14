@@ -6,6 +6,7 @@ import "./Options.css";
 import { GrAddCircle } from "react-icons/gr";
 import { GrSubtractCircle } from "react-icons/gr";
 
+
 const Options = ({ exercises, onExercisesChange }) => {
   // dynamically fetch the names from the database - Flask + python is used to get data using api key -> axios is used to fetch data from python
   // TODO: use axios only - replace flask + python with axios
@@ -219,7 +220,7 @@ const Options = ({ exercises, onExercisesChange }) => {
             </select>
             {index === exercises.length - 1 ? (
               <button className="Add-Workout" onClick={addExercise}>
-                <GrAddCircle/>
+                <GrAddCircle color="white" />
               </button>
             ) : (
               <button
@@ -227,7 +228,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 className="Remove-Workout"
                 onClick={() => removeExercise(index)}
               >
-                <GrSubtractCircle />
+                <GrSubtractCircle color="white"/>
               </button>
             )}
           </div>
