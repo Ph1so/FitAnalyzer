@@ -6,7 +6,7 @@
 
 Languages: `JavaScript` `HTML` `CSS`
 
-Frameworks: `React` `Node` `Express` `Passport`
+Frameworks: `React` `Node` `Express` `Passport` `Chart`
 
 ## Progress
 
