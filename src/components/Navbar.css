@@ -29,7 +29,12 @@
 }
 
 .navbar-links {
+  font-family: "Supreme", sans-serif;
   font-size: 2em;
-  color: #00bfff;
+  color: #9692fe;
   text-decoration: none;
+}
+
+.navbar-links:hover {
+  text-decoration: underline;
 }

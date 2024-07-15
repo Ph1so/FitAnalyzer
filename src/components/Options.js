@@ -6,7 +6,6 @@ import "./Options.css";
 import { GrAddCircle } from "react-icons/gr";
 import { GrSubtractCircle } from "react-icons/gr";
 
-
 const Options = ({ exercises, onExercisesChange }) => {
   // dynamically fetch the names from the database - Flask + python is used to get data using api key -> axios is used to fetch data from python
   // TODO: use axios only - replace flask + python with axios
@@ -203,21 +202,27 @@ const Options = ({ exercises, onExercisesChange }) => {
       {exercises.map((exercise, index) => (
         <div className="Option-container" key={index}>
           <div className="Workout-choice">
-            <label className="Exercise-Number" htmlFor={`workout-select-${index}`}>
-              Exercise #{index + 1}: 
+            <label
+              className="Exercise-Number"
+              htmlFor={`workout-select-${index}`}
+            >
+              Exercise #{index + 1}:
             </label>
             <select
               id={`workout-select-${index}`}
               value={exercise.workout}
               onChange={(e) => handleChange(index, "workout", e.target.value)}
             >
-              <option value="">hello</option>
+              <option value="" disabled style={{ color: "#888" }}>
+                Exercise
+              </option>
               {optionsList.map((option, optionIndex) => (
                 <option key={optionIndex} value={option}>
                   {option}
                 </option>
               ))}
             </select>
+
             {index === exercises.length - 1 ? (
               <button className="Add-Workout" onClick={addExercise}>
                 <GrAddCircle color="white" />
@@ -228,7 +233,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 className="Remove-Workout"
                 onClick={() => removeExercise(index)}
               >
-                <GrSubtractCircle color="white"/>
+                <GrSubtractCircle color="white" />
               </button>
             )}
           </div>
