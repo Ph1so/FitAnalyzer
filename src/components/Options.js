@@ -3,6 +3,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Options.css";
+import { GrAddCircle } from "react-icons/gr";
+import { GrSubtractCircle } from "react-icons/gr";
+
 
 const Options = ({ exercises, onExercisesChange }) => {
   // dynamically fetch the names from the database - Flask + python is used to get data using api key -> axios is used to fetch data from python
@@ -200,8 +203,8 @@ const Options = ({ exercises, onExercisesChange }) => {
       {exercises.map((exercise, index) => (
         <div className="Option-container" key={index}>
           <div className="Workout-choice">
-            <label htmlFor={`workout-select-${index}`}>
-              Exercise #{index + 1}:
+            <label className="Exercise-Number" htmlFor={`workout-select-${index}`}>
+              Exercise #{index + 1}: 
             </label>
             <select
               id={`workout-select-${index}`}
@@ -217,7 +220,7 @@ const Options = ({ exercises, onExercisesChange }) => {
             </select>
             {index === exercises.length - 1 ? (
               <button className="Add-Workout" onClick={addExercise}>
-                Add
+                <GrAddCircle color="white" />
               </button>
             ) : (
               <button
@@ -225,13 +228,13 @@ const Options = ({ exercises, onExercisesChange }) => {
                 className="Remove-Workout"
                 onClick={() => removeExercise(index)}
               >
-                Remove
+                <GrSubtractCircle color="white"/>
               </button>
             )}
           </div>
           <div className="Reps-container">
             <div className="Reps">
-              <label htmlFor={`reps-select-${index}`}>Reps: </label>
+              <label htmlFor={`reps-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="Reps"
@@ -241,7 +244,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               />
             </div>
             <div className="Sets">
-              <label htmlFor={`sets-select-${index}`}>Sets: </label>
+              <label htmlFor={`sets-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="Sets"
@@ -251,7 +254,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               />
             </div>
             <div className="Rir">
-              <label htmlFor={`rir-select-${index}`}>RIR: </label>
+              <label htmlFor={`rir-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="RIR"

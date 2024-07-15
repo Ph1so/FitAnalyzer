@@ -23,3 +23,15 @@
   color: transparent;
   margin-bottom: 0.25em;
 }
+
+@media (max-width: 480px) {
+  .Title{
+    font-size: 4em;
+  }
+} 
+
+@media (max-width: 400px) {
+  .Title{
+    font-size: 4em;
+  }
+}
