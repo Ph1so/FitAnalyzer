@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import Title from "./components/Title";
 import WorkoutName from "./components/WorkoutName";
-import {Chart as ChartJs } from 'chart.js/auto';
+import {Chart as ChartJs } from 'chart.js/auto'; //dont delete this otherwise it breaks 
 import { Bar } from 'react-chartjs-2';
 import BarChart from "./components/BarChart";
 
