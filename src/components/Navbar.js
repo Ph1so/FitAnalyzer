@@ -10,16 +10,13 @@ const Navbar = () => {
         <nav className="navbar">
             <img src={logo} alt="FitAnalyzer Logo" className="navbar-logo" />
             <h1 className="navbar-title">FitAnalyzer</h1>
-            <div className="container">
-                <div className="icon-container">
-                    <FaHome className="icon-home" />
-                    <GiMuscleUp className="icon-workout"/>
-                    <SiSimpleanalytics className="icon-stats"/>
-                </div>
+            <div className="icon-container">
+                <FaHome className="icon" />
+                <GiMuscleUp className="icon" />
+                <SiSimpleanalytics className="icon" />
             </div>
         </nav>
     );
-
 };
 
 export default Navbar
