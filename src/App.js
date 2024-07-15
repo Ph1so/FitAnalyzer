@@ -29,7 +29,6 @@ function App() {
 
 const WorkoutPage = () => (
   <div className="Components-Container">
-    <div className="version">v.1.0</div>
     <Title />
     <WorkoutName />
   </div>

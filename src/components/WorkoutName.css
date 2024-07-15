@@ -6,11 +6,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(
-    135deg,
-    #ece9e6,
-    #ffffff
-  ); /* Background gradient */
   font-family: "Supreme", sans-serif;
 }
 
@@ -20,7 +15,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: #fff; /* Changed to white for better contrast */
+  background-color: #2a2a2a; /* Changed to white for better contrast */
   border-radius: 10px; /* Rounded corners */
   padding: 1vmin; /* Added padding for better spacing */
 }
