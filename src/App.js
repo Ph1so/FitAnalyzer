@@ -5,6 +5,7 @@ import WorkoutName from "./components/WorkoutName";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
+import AnalysisPage from "./components/AnalysisPage";
 import { Chart as ChartJs } from "chart.js/auto"; //dont delete this otherwise it breaks
 import { Bar } from "react-chartjs-2";
 import BarChart from "./components/BarChart";
@@ -16,8 +17,9 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<LandingPage />} />
           <Route path="/workout" element={<WorkoutPage />} />
+          <Route path="/analysis" element={<AnalysisPage />} />
         </Routes>
       </div>
       <div>

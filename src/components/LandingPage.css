@@ -14,14 +14,21 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  background-image: url('/Users/joshuakim/Documents/GitHub/fitness-trainer/src/images/workout.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: "Supreme", sans-serif;
+  color: #333;
+  letter-spacing: 0.05rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  opacity: 0.7; 
 }
 
 .landing-title {
   font-family: "Supreme", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: #6c63ff;
   letter-spacing: 0.05rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }

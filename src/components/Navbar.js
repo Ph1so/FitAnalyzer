@@ -1,20 +1,21 @@
-import React from "react";
-import "./Navbar.css";
-// import { FaHome } from "react-icons/fa";
-// import { GiMuscleUp } from "react-icons/gi";
-// import { SiSimpleanalytics } from "react-icons/si";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <h1 className="navbar-title">FitAnalyzer</h1>
       <div className="icon-container">
-        {/* <FaHome className="icon" />
-        <GiMuscleUp className="icon" />
-        <SiSimpleanalytics className="icon" /> */}
-        <a href="/" className="navbar-links">
+        <Link to="/home" className="navbar-links">
           Home
-        </a>
+        </Link>
+        <Link to="/workout" className="navbar-links">
+          Workout
+        </Link>
+        <Link to="/analysis" className="navbar-links">
+          Analysis
+        </Link>
       </div>
     </nav>
   );
