@@ -172,6 +172,7 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Push-Ups - Close Triceps Position",
     "Kneeling cable triceps extension",
     "Single-arm cable triceps extension",
+    "Lat Pulldown"
   ];
 
   const addExercise = () => {
