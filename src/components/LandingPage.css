@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url('/Users/joshuakim/Documents/GitHub/fitness-trainer/src/images/workout.jpg'); /* Adjust path to your image */
+  background-image: url('../images/workout.jpg'); /* Adjust path to your image */
   background-size: cover;
   background-position: center;
   font-family: "Supreme", sans-serif;

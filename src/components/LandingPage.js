@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LandingPage.css';
-import backgroundImage from '/Users/joshuakim/Documents/GitHub/fitness-trainer/src/images/workout.jpg';
+import backgroundImage from '../images/workout.jpg';
 
 const LandingPage = () => {
   const navigate = useNavigate();
