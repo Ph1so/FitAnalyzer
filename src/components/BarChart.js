@@ -1,10 +1,13 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import "./BarChart.css";
+import PropTypes from "prop-types";
 
-const BarChart = () => {
+const BarChart = ({ workouts }) => {
+  console.log(workouts);
   return (
     <div className="bar-chart-container">
+      <pre>{JSON.stringify(workouts, null, 2)}</pre>
       <Bar
         data={{
           labels: ["Back", "Bicep", "Tricep", "Chest", "Legs"],
@@ -65,6 +68,10 @@ const BarChart = () => {
       />
     </div>
   );
+};
+
+BarChart.propTypes = {
+  workouts: PropTypes.array.isRequired,
 };
 
 export default BarChart;
