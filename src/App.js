@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import AnalysisPage from "./components/AnalysisPage";
 
+
 // TODO: consider putting the array of day names + workouts here instead of in WorkoutName.js and then passing it down as props
 function App() {
   return (
