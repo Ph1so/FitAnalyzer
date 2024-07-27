@@ -157,7 +157,7 @@ const BarChart = () => {
 
   return (
     <div className="bar-chart-container">
-      <pre>{JSON.stringify(workouts, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(workouts, null, 2)}</pre> */}
       <Bar
         data={formattedData}
         options={{
