@@ -4,7 +4,18 @@ import "./BarChart.css";
 import PropTypes from "prop-types";
 
 const BarChart = ({ workouts }) => {
-  console.log(workouts);
+  // Check if Monday workouts exist
+  // Check if workouts and Monday workouts exist
+  const mondayWorkouts = workouts?.Mon?.exercises;
+
+  if (mondayWorkouts) {
+    // Iterate through each workout on Monday
+    mondayWorkouts.forEach((workout, index) => {
+      console.log(`Workout ${index + 1} on Monday:`, workout);
+    });
+  } else {
+    console.log("No workouts available for Monday.");
+  }
   return (
     <div className="bar-chart-container">
         <pre>{JSON.stringify(workouts, null, 2)}</pre>
