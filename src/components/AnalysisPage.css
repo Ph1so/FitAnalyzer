@@ -1,5 +1,44 @@
-.blank-page {
-    height: 100vh;
-    background-color: #121212;
+
+  .analysis-page {
+    min-height: 100vh; /* Ensure the container takes at least full viewport height */
+    display: flex;
+    flex-direction: column;
   }
   
+  .content {
+    flex: 1; /* This will push the footer to the bottom */
+    padding: 20px;
+  }
+  
+  footer.source {
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.8); /* Light grey background for the footer */
+    text-align: center; /* Center align the text */
+    
+  }
+  
+  .source p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .source a {
+    color: #007BFF; /* Blue color for the link */
+    text-decoration: none;
+  }
+  
+  .source a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .source p {
+      font-size: 12px; /* Smaller text size for mobile devices */
+    }
+  
+    .source a {
+      font-size: 12px; /* Adjust link font size for mobile */
+    }
+  }
