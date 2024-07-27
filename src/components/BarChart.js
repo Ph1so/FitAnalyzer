@@ -1,56 +1,56 @@
-import React from "react";
-import { Bar } from "react-chartjs-2";
-import "./BarChart.css";
-import PropTypes from "prop-types";
+// BarChart.js
+import React from 'react';
+import { Bar } from 'react-chartjs-2';
+import './BarChart.css';
+import { useWorkoutContext } from './WorkoutContext';
 
-const BarChart = ({ workouts }) => {
-  // Check if Monday workouts exist
-  // Check if workouts and Monday workouts exist
+const BarChart = () => {
+  const { workouts } = useWorkoutContext();
   const mondayWorkouts = workouts?.Mon?.exercises;
 
   if (mondayWorkouts) {
-    // Iterate through each workout on Monday
     mondayWorkouts.forEach((workout, index) => {
       console.log(`Workout ${index + 1} on Monday:`, workout);
     });
   } else {
-    console.log("No workouts available for Monday.");
+    console.log('No workouts available for Monday.');
   }
+
   return (
     <div className="bar-chart-container">
-        <pre>{JSON.stringify(workouts, null, 2)}</pre>
+      <pre>{JSON.stringify(workouts, null, 2)}</pre>
       <Bar
         data={{
-          labels: ["Back", "Bicep", "Tricep", "Chest", "Legs"],
+          labels: ['Back', 'Bicep', 'Tricep', 'Chest', 'Legs'],
           datasets: [
             {
-              label: "User",
+              label: 'User',
               data: [7, 18, 7, 12, 16],
-              backgroundColor: ["#FFFFFF"],
-              borderColor: "#ffffff",
+              backgroundColor: ['#FFFFFF'],
+              borderColor: '#ffffff',
               tension: 0.4,
-              type: "scatter",
+              type: 'scatter',
             },
             {
-              label: "Sub-Optimal",
+              label: 'Sub-Optimal',
               data: [12, 10, 8, 10, 10],
-              backgroundColor: ["rgba(231,188,64)"],
+              backgroundColor: ['rgba(231,188,64)'],
               borderWidth: 1,
               barPercentage: 0.7,
               categoryPercentage: 0.5,
             },
             {
-              label: "Optimal",
+              label: 'Optimal',
               data: [6, 5, 5, 6, 8],
-              backgroundColor: ["#00ab41"],
+              backgroundColor: ['#00ab41'],
               borderWidth: 1,
               barPercentage: 0.7,
               categoryPercentage: 0.5,
             },
             {
-              label: "Junk",
+              label: 'Junk',
               data: [2, 5, 7, 4, 2],
-              backgroundColor: ["#D7504D"],
+              backgroundColor: ['#D7504D'],
               borderWidth: 1,
               barPercentage: 0.7,
               categoryPercentage: 0.5,
@@ -58,19 +58,19 @@ const BarChart = ({ workouts }) => {
           ],
         }}
         options={{
-          indexAxis: "y",
+          indexAxis: 'y',
           scales: {
             x: {
               beginAtZero: true,
               stacked: true,
               grid: {
-                color: "#808080",
+                color: '#808080',
               },
             },
             y: {
               beginAtZero: true,
               grid: {
-                color: "#808080",
+                color: '#808080',
               },
               stacked: true,
             },
@@ -79,10 +79,6 @@ const BarChart = ({ workouts }) => {
       />
     </div>
   );
-};
-
-BarChart.propTypes = {
-  workouts: PropTypes.array.isRequired,
 };
 
 export default BarChart;
