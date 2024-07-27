@@ -63,40 +63,52 @@ const BarChart = () => {
     back: 0,
   };
 
-  // Access and process Monday workouts
-  const mondayWorkouts = workouts?.Mon?.exercises;
-  if (mondayWorkouts) {
-    mondayWorkouts.forEach((workout, index) => {
-      console.log(`Workout ${index + 1} on Monday:`, workout); // Log entire workout object
+  // Initialize sets count for each day
+  const setsPerDay = {
+    Mon: { biceps: 0, triceps: 0, chest: 0, legs: 0, back: 0 },
+    Tue: { biceps: 0, triceps: 0, chest: 0, legs: 0, back: 0 },
+    Wed: { biceps: 0, triceps: 0, chest: 0, legs: 0, back: 0 },
+    Thu: { biceps: 0, triceps: 0, chest: 0, legs: 0, back: 0 },
+    Fri: { biceps: 0, triceps: 0, chest: 0, legs: 0, back: 0 },
+    Sat: { biceps: 0, triceps: 0, chest: 0, legs: 0, back: 0 },
+    Sun: { biceps: 0, triceps: 0, chest: 0, legs: 0, back: 0 },
+  };
 
-      const name = workout?.workout || ''; // Use optional chaining
-      const sets = parseInt(workout?.sets, 10) || 0; // Convert to number and default to 0
+  // Process workouts for each day of the week
+  Object.keys(setsPerDay).forEach((day) => {
+    const dailyWorkouts = workouts?.[day]?.exercises || [];
+    dailyWorkouts.forEach((workout) => {
+      const name = workout?.workout || '';
+      const sets = parseInt(workout?.sets, 10) || 0;
 
-      // console.log(`Workout Name: ${name}, Sets: ${sets}`);
-
-      if (name && sets > 0) { // Ensure name and sets are valid
+      if (name && sets > 0) {
         if (exerciseData.bicepExercises.some((ex) => ex.name === name)) {
-          setsPerMuscleGroup.biceps += sets;
+          setsPerDay[day].biceps += sets;
         }
         if (exerciseData.tricepExercises.some((ex) => ex.name === name)) {
-          setsPerMuscleGroup.triceps += sets;
+          setsPerDay[day].triceps += sets;
         }
         if (exerciseData.chestExercises.some((ex) => ex.name === name)) {
-          setsPerMuscleGroup.chest += sets;
+          setsPerDay[day].chest += sets;
         }
         if (exerciseData.legExercises.some((ex) => ex.name === name)) {
-          setsPerMuscleGroup.legs += sets;
+          setsPerDay[day].legs += sets;
         }
         if (exerciseData.backExercises.some((ex) => ex.name === name)) {
-          setsPerMuscleGroup.back += sets;
+          setsPerDay[day].back += sets;
         }
-      } else {
-        // console.warn(`Invalid workout data: ${JSON.stringify(workout)}`);
       }
     });
-  } else {
-    console.log('No workouts available for Monday.');
-  }
+  });
+
+  // Aggregate sets from all days
+  Object.keys(setsPerDay).forEach((day) => {
+    setsPerMuscleGroup.biceps += setsPerDay[day].biceps;
+    setsPerMuscleGroup.triceps += setsPerDay[day].triceps;
+    setsPerMuscleGroup.chest += setsPerDay[day].chest;
+    setsPerMuscleGroup.legs += setsPerDay[day].legs;
+    setsPerMuscleGroup.back += setsPerDay[day].back;
+  });
 
   // Format the fetched exercises data into a format suitable for the chart
   const formattedData = {
