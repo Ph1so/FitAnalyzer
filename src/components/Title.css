@@ -1,11 +1,14 @@
 @import url("../fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
 
 .Title-container {
   display: flex;
-  font-family: "Supreme", sans-serif;
+  font-family: "Rubik", sans-serif;
   justify-content: center;
   align-items: center;
   padding: 2vmin;
+  font-weight: 400; /* Apply bold weight */
   margin-bottom: 5vmin;
   width: 100%;
   max-width: 60vmin;
@@ -15,7 +18,9 @@
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
 .Title {
+  font-family: "Rubik", sans-serif;
   font-size: 5.5em;
+  font-weight: 400; /* Apply bold weight */
   background-color: #9692fe;
   background-size: cover;
   background-clip: text;
