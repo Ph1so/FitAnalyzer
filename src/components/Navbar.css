@@ -49,7 +49,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar-item:hover {
+.navbar-links:hover {
   color: #9692fe; /* Highlight color on hover */
 }
 
@@ -67,6 +67,3 @@ body {
   text-decoration: none;
 }
 
-.navbar-links:hover {
-  text-decoration: underline;
-}
