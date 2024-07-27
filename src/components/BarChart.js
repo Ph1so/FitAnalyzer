@@ -54,18 +54,45 @@ const BarChart = () => {
     ]);
   }, []); // Empty dependency array ensures this runs only once when the component mounts
 
-  // Log the current state of exercises
-  console.log('Bicep Exercises:', exerciseData.bicepExercises);
-  console.log('Tricep Exercises:', exerciseData.tricepExercises);
-  console.log('Chest Exercises:', exerciseData.chestExercises);
-  console.log('Leg Exercises:', exerciseData.legExercises);
-  console.log('Back Exercises:', exerciseData.backExercises);
+  // Initialize sets count for each muscle group
+  const setsPerMuscleGroup = {
+    biceps: 0,
+    triceps: 0,
+    chest: 0,
+    legs: 0,
+    back: 0,
+  };
 
-  // Access and log Monday workouts
+  // Access and process Monday workouts
   const mondayWorkouts = workouts?.Mon?.exercises;
   if (mondayWorkouts) {
     mondayWorkouts.forEach((workout, index) => {
-      console.log(`Workout ${index + 1} on Monday:`, workout);
+      console.log(`Workout ${index + 1} on Monday:`, workout); // Log entire workout object
+
+      const name = workout?.workout || ''; // Use optional chaining
+      const sets = parseInt(workout?.sets, 10) || 0; // Convert to number and default to 0
+
+      // console.log(`Workout Name: ${name}, Sets: ${sets}`);
+
+      if (name && sets > 0) { // Ensure name and sets are valid
+        if (exerciseData.bicepExercises.some((ex) => ex.name === name)) {
+          setsPerMuscleGroup.biceps += sets;
+        }
+        if (exerciseData.tricepExercises.some((ex) => ex.name === name)) {
+          setsPerMuscleGroup.triceps += sets;
+        }
+        if (exerciseData.chestExercises.some((ex) => ex.name === name)) {
+          setsPerMuscleGroup.chest += sets;
+        }
+        if (exerciseData.legExercises.some((ex) => ex.name === name)) {
+          setsPerMuscleGroup.legs += sets;
+        }
+        if (exerciseData.backExercises.some((ex) => ex.name === name)) {
+          setsPerMuscleGroup.back += sets;
+        }
+      } else {
+        // console.warn(`Invalid workout data: ${JSON.stringify(workout)}`);
+      }
     });
   } else {
     console.log('No workouts available for Monday.');
@@ -78,11 +105,11 @@ const BarChart = () => {
       {
         label: 'User',
         data: [
-          exerciseData.backExercises.length, 
-          exerciseData.bicepExercises.length,
-          exerciseData.tricepExercises.length,
-          exerciseData.chestExercises.length,
-          exerciseData.legExercises.length,
+          setsPerMuscleGroup.back,
+          setsPerMuscleGroup.biceps,
+          setsPerMuscleGroup.triceps,
+          setsPerMuscleGroup.chest,
+          setsPerMuscleGroup.legs,
         ],
         backgroundColor: ['#FFFFFF'],
         borderColor: '#ffffff',
