@@ -8,13 +8,13 @@ const WorkoutContext = createContext();
 export const WorkoutProvider = ({ children }) => {
   // State to hold workout data
   const [workouts, setWorkouts] = useState({
-    Mon: { name: "", exercises: [{ workout: "", reps: 0, sets: 0, rir: 0 }] },
-    Tue: { name: "", exercises: [{ workout: "", reps: 0, sets: 0, rir: 0 }] },
-    Wed: { name: "", exercises: [{ workout: "", reps: 0, sets: 0, rir: 0 }] },
-    Thu: { name: "", exercises: [{ workout: "", reps: 0, sets: 0, rir: 0 }] },
-    Fri: { name: "", exercises: [{ workout: "", reps: 0, sets: 0, rir: 0 }] },
-    Sat: { name: "", exercises: [{ workout: "", reps: 0, sets: 0, rir: 0 }] },
-    Sun: { name: "", exercises: [{ workout: "", reps: 0, sets: 0, rir: 0 }] },
+    Mon: { name: "", exercises: [{ workout: "", reps: "", sets: "", rir: "" }] },
+    Tue: { name: "", exercises: [{ workout: "", reps: "", sets: "", rir: "" }] },
+    Wed: { name: "", exercises: [{ workout: "", reps: "", sets: "", rir: "" }] },
+    Thu: { name: "", exercises: [{ workout: "", reps: "", sets: "", rir: "" }] },
+    Fri: { name: "", exercises: [{ workout: "", reps: "", sets: "", rir: "" }] },
+    Sat: { name: "", exercises: [{ workout: "", reps: "", sets: "", rir: "" }] },
+    Sun: { name: "", exercises: [{ workout: "", reps: "", sets: "", rir: "" }] },
   });
 
   return (

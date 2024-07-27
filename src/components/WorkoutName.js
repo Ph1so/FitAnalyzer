@@ -59,7 +59,7 @@ const WorkoutName = () => {
           }
         />
       )}
-      <BarChart />
+      {/* <BarChart /> */}
     </div>
   );
 };
