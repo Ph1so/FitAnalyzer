@@ -1,8 +1,11 @@
 @import url("../fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@100;200;300;400;500&display=swap');
+
 
 body {
   margin: 0;
-  font-family: "Supreme", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
 }
 
 .navbar {
@@ -26,8 +29,9 @@ body {
 
 .navbar-title {
   color: white;
-  font-family: "Supreme", sans-serif;
-  font-size: 1.5rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
   margin: 0;
   margin-right: auto;
 }
@@ -56,8 +60,9 @@ body {
 }
 
 .navbar-links {
-  font-family: "Supreme", sans-serif;
-  font-size: 1.5em;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 100;
+  font-size: 1.3em;
   color: white;
   text-decoration: none;
 }
