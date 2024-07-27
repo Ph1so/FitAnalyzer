@@ -32,3 +32,18 @@
     padding: 1vmin;
   }
 }
+
+/* Hide warning message initially */
+.warning-message {
+  display: flex;
+  flex-direction: column; /* Stack warnings vertically */
+  gap: 10px; /* Space between lines of warnings */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* Show warning message after 1 second */
+.bar-chart-container.loaded .warning-message {
+  opacity: 1; /* Make visible */
+}
+

@@ -16,6 +16,14 @@ const BarChart = () => {
     calfExercises: [], // Added for calves
   });
 
+  // State for warnings
+  const [warnings, setWarnings] = useState({
+    considerMore: [],
+    considerLess: []
+  });
+  
+  const [loaded, setLoaded] = useState(false); // New state for animation
+
   useEffect(() => {
     const fetchExercises = async (muscles) => {
       try {
@@ -37,14 +45,6 @@ const BarChart = () => {
         const latPulldown = { name: 'Lat Pulldown', muscle: 'lats' };
         allBackExercises.push(latPulldown);
 
-        console.log('Bicep Exercises:', results[5]);
-        console.log('Tricep Exercises:', results[6]);
-        console.log('Chest Exercises:', results[7]);
-        console.log('Quad Exercises:', results[3]);
-        console.log('Back Exercises:', allBackExercises);
-        console.log('Hamstring Exercises:', results[4]);
-        console.log('Calf Exercises:', results[8]);
-
         // Set state with results
         setExerciseData({
           bicepExercises: results[5],
@@ -52,9 +52,15 @@ const BarChart = () => {
           chestExercises: results[7],
           quadExercises: results[3], // Include quadriceps exercises
           backExercises: allBackExercises,
-          hamstringExercises: results[2], // Include hamstrings exercises
+          hamstringExercises: results[4], // Include hamstrings exercises
           calfExercises: results[8], // Include calves exercises
         });
+
+        // Set loaded state to true after 1 second
+        setTimeout(() => {
+          setLoaded(true);
+        }, 1000);
+
       } catch (error) {
         console.error('Error fetching exercises:', error);
       }
@@ -131,6 +137,38 @@ const BarChart = () => {
     setsPerMuscleGroup.calves += setsPerDay[day].calves;
   });
 
+  // Update the warnings based on the set counts
+  useEffect(() => {
+    setWarnings({
+      considerMore: [
+        setsPerMuscleGroup.chest > 16 ? 'Chest' : '',
+        setsPerMuscleGroup.back < 12 ? 'Back' : '',
+        setsPerMuscleGroup.biceps < 5 ? 'Biceps' : '',
+        setsPerMuscleGroup.triceps < 5 ? 'Triceps' : '',
+        setsPerMuscleGroup.hamstrings < 12 ? 'Hamstrings' : '',
+        setsPerMuscleGroup.quads < 12 ? 'Quads' : '',
+        setsPerMuscleGroup.calves < 5 ? 'Calves' : '',
+      ].filter(Boolean).join(', '),
+      considerLess: [
+        setsPerMuscleGroup.chest > 16 ? 'Chest' : '',
+        setsPerMuscleGroup.back > 16 ? 'Back' : '',
+        setsPerMuscleGroup.biceps > 9 ? 'Biceps' : '',
+        setsPerMuscleGroup.triceps > 9 ? 'Triceps' : '',
+        setsPerMuscleGroup.hamstrings > 16 ? 'Hamstrings' : '',
+        setsPerMuscleGroup.quads > 16 ? 'Quads' : '',
+        setsPerMuscleGroup.calves > 9 ? 'Calves' : '',
+      ].filter(Boolean).join(', '),
+    });
+  }, [
+    setsPerMuscleGroup.back,
+    setsPerMuscleGroup.chest,
+    setsPerMuscleGroup.biceps,
+    setsPerMuscleGroup.triceps,
+    setsPerMuscleGroup.hamstrings,
+    setsPerMuscleGroup.quads,
+    setsPerMuscleGroup.calves,
+  ]);
+
   // Format the fetched exercises data into a format suitable for the chart
   const formattedData = {
     labels: ['Back', 'Bicep', 'Tricep', 'Chest', 'Quads', 'Hams', 'Calves'],
@@ -153,7 +191,7 @@ const BarChart = () => {
       },
       {
         label: 'Sub-Optimal',
-        data: [12, 10, 8, 10, 10, 8, 6], // Adjusted to include hamstrings and calves
+        data: [12, 5, 5, 12, 12, 10, 5], 
         backgroundColor: ['rgba(231,188,64)'],
         borderWidth: 1,
         barPercentage: 0.7,
@@ -161,15 +199,23 @@ const BarChart = () => {
       },
       {
         label: 'Optimal',
-        data: [6, 5, 5, 6, 8, 6, 5], // Adjusted to include hamstrings and calves
+        data: [4, 4, 4, 4, 4, 4, 4], 
         backgroundColor: ['#00ab41'],
         borderWidth: 1,
         barPercentage: 0.7,
         categoryPercentage: 0.5,
       },
       {
+        label: 'Minimal',
+        data: [2, 3, 3, 2, 2, 3, 3], 
+        backgroundColor: ['#e07c4f'],
+        borderWidth: 1,
+        barPercentage: 0.7,
+        categoryPercentage: 0.5,
+      },
+      {
         label: 'Junk',
-        data: [2, 5, 7, 4, 2, 4, 2], // Adjusted to include hamstrings and calves
+        data: [2, 8, 8, 2, 2, 3, 8], 
         backgroundColor: ['#D7504D'],
         borderWidth: 1,
         barPercentage: 0.7,
@@ -179,8 +225,7 @@ const BarChart = () => {
   };
 
   return (
-    <div className="bar-chart-container">
-      {/* <pre>{JSON.stringify(workouts, null, 2)}</pre> */}
+    <div className={`bar-chart-container ${loaded ? 'loaded' : ''}`}>
       <Bar
         data={formattedData}
         options={{
@@ -203,6 +248,14 @@ const BarChart = () => {
           },
         }}
       />
+      <div className="warning-container">
+        <p className="warning-message">
+          {warnings.considerMore && `Consider more: ${warnings.considerMore}`}
+        </p>
+        <p className="warning-message">
+          {warnings.considerLess && `Consider less: ${warnings.considerLess}`}
+        </p>
+      </div>
     </div>
   );
 };
