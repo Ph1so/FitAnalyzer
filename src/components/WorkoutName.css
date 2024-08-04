@@ -50,7 +50,7 @@
 
 /* Styling for the WorkoutName input */
 .WorkoutName-input {
-  max-width: 30vmin;
+  max-width: 10vmax;
   height: 4vmin;
   padding: 8px;
   border: none;
