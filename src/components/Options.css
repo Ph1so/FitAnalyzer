@@ -28,7 +28,7 @@
   font-size: large;
   justify-content: center;
   align-items: center;
-  margin-left: 1vmin;
+  margin-left: -1vmin;
   background-color: transparent;
   border: none;
   padding-left: 70px;
@@ -37,6 +37,7 @@
 
 .Add-Workout:hover {
   color: #7469b6;
+  cursor: pointer;
 }
 
 .Remove-Workout {
@@ -44,7 +45,7 @@
   font-size: large;
   justify-content: center;
   align-items: center;
-  margin-left: 1vmin;
+  margin-left: -1vmin;
   background-color: transparent;
   border: none;
   padding-left: 70px;
@@ -53,6 +54,7 @@
 
 .Remove-Workout:hover {
   color: #7469b6;
+  cursor: pointer;
 }
 
 .Workout-choice,
@@ -178,10 +180,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
+    margin-left: 1vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
+    margin-left: 1vmin;
   }
 }
 
@@ -199,10 +203,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
+    margin-left: 1vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
+    margin-left: 1vmin;
   }
 }
 
@@ -220,10 +226,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
+    margin-left: 1vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
+    margin-left: 1vmin;
   }
 }
 
@@ -236,3 +244,5 @@ input[type="text"] {
     width: 30%;
   }
 }
+
+
