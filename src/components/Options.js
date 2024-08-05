@@ -1,12 +1,12 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Options.css";
 import { GrAddCircle } from "react-icons/gr";
 import { GrSubtractCircle } from "react-icons/gr";
 
 const Options = ({ exercises, onExercisesChange }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [dropdownIndex, setDropdownIndex] = useState(null);
   // dynamically fetch the names from the database - Flask + python is used to get data using api key -> axios is used to fetch data from python
   // TODO: use axios only - replace flask + python with axios
 
@@ -175,6 +175,10 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Lat Pulldown"
   ];
 
+  const filteredOptions = optionsList.filter(option =>
+    option.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const addExercise = () => {
     const updatedExercises = [
       ...exercises,
@@ -203,26 +207,42 @@ const Options = ({ exercises, onExercisesChange }) => {
       {exercises.map((exercise, index) => (
         <div className="Option-container" key={index}>
           <div className="Workout-choice">
-            <label
-              className="Exercise-Number"
-              htmlFor={`workout-select-${index}`}
-            >
+            <label className="Exercise-Number" htmlFor={`workout-select-${index}`}>
               Exercise #{index + 1}:
             </label>
-            <select
-              id={`workout-select-${index}`}
-              value={exercise.workout}
-              onChange={(e) => handleChange(index, "workout", e.target.value)}
-            >
-              <option value="" disabled style={{ color: "#888" }}>
-                Exercise
-              </option>
-              {optionsList.map((option, optionIndex) => (
-                <option key={optionIndex} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
+            <div className="Dropdown">
+              <input
+                type="text"
+                placeholder="Search exercise"
+                value={exercise.workout}
+                onChange={(e) => {
+                  handleChange(index, "workout", e.target.value);
+                  setSearchTerm(e.target.value);
+                }}
+                onClick={() => setDropdownIndex(index)}
+                onBlur={() => setTimeout(() => setDropdownIndex(null), 100)}
+              />
+              {dropdownIndex === index && (
+                <ul className="Dropdown-menu">
+                  {filteredOptions.length > 0 ? (
+                    filteredOptions.map((option, optionIndex) => (
+                      <li
+                        key={optionIndex}
+                        onClick={() => {
+                          handleChange(index, "workout", option);
+                          setSearchTerm(option);
+                          setDropdownIndex(null);
+                        }}
+                      >
+                        {option}
+                      </li>
+                    ))
+                  ) : (
+                    <li>No results</li>
+                  )}
+                </ul>
+              )}
+            
 
             {index === exercises.length - 1 ? (
               <button className="Add-Workout" onClick={addExercise}>
@@ -237,6 +257,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 <GrSubtractCircle color="white" />
               </button>
             )}
+            </div>
           </div>
           <div className="Reps-container">
             <div className="Reps">
