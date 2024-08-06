@@ -251,6 +251,19 @@ const BarChart = () => {
                 color: '#808080',
               },
               stacked: true,
+              ticks: {
+                // Increase the padding to avoid overlapping
+                padding: 10,
+                // Show every label
+                autoSkip: false,
+              },
+            },
+          },
+          elements: {
+            bar: {
+              // Decrease these values to increase spacing between bars
+              barPercentage: 0.6, // Adjust width of the bars
+              categoryPercentage: 0.8, // Adjust the spacing between groups of bars
             },
           },
         }}
