@@ -100,9 +100,9 @@ select {
   width: 100%;
   max-height: 200px;
   overflow-y: auto;
-  border: 1px solid #ccc;
+  border: #121212;
   border-radius: 4px;
-  background: white;
+  background-color: #2A2A2A;
   z-index: 1000;
   padding: 0;
   margin: 0;
@@ -112,7 +112,7 @@ select {
 .Dropdown-menu li {
   padding: 8px;
   cursor: pointer;
-  border-bottom: 1px solid #ddd; /* Add line between items */
+  border-bottom: 1px solid #121212;; /* Add line between items */
 }
 
 .Dropdown-menu li:hover {
