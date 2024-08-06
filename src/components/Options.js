@@ -1,15 +1,25 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./Options.css";
+import { GrAddCircle } from "react-icons/gr";
+import { GrSubtractCircle } from "react-icons/gr";
 
 const Options = ({ exercises, onExercisesChange }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [dropdownIndex, setDropdownIndex] = useState(null);
   // dynamically fetch the names from the database - Flask + python is used to get data using api key -> axios is used to fetch data from python
   // TODO: use axios only - replace flask + python with axios
 
   // only occurs once when the component is mounted
   const optionsList = [
+    "Lat Pulldown",
+    "Preacher Curl",
+    "Tricep Pushdown",
+    "Barbell Bench Press - Medium Grip",
+    "Hammer Curls",
+    "EZ-Bar Curl",
+    "Barbell Curl",
+    "Concentration curl",
     "Landmine twist",
     "Elbow plank",
     "Bottoms Up",
@@ -43,12 +53,8 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Incline Hammer Curls",
     "Wide-grip barbell curl",
     "EZ-bar spider curl",
-    "Hammer Curls",
-    "EZ-Bar Curl",
     "Zottman Curl",
     "Biceps curl to shoulder press",
-    "Barbell Curl",
-    "Concentration curl",
     "Flexor Incline Dumbbell Curls",
     "Smith Machine Calf Raise",
     "Standing Calf Raises",
@@ -66,7 +72,6 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Dumbbell Flyes",
     "Incline dumbbell bench press",
     "Low-cable cross-over",
-    "Barbell Bench Press - Medium Grip",
     "Chest dip",
     "Decline Dumbbell Flyes",
     "Bodyweight Flyes",
@@ -172,6 +177,10 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Single-arm cable triceps extension",
   ];
 
+  const filteredOptions = optionsList.filter(option =>
+    option.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   const addExercise = () => {
     const updatedExercises = [
       ...exercises,
@@ -200,24 +209,46 @@ const Options = ({ exercises, onExercisesChange }) => {
       {exercises.map((exercise, index) => (
         <div className="Option-container" key={index}>
           <div className="Workout-choice">
-            <label htmlFor={`workout-select-${index}`}>
+            <label className="Exercise-Number" htmlFor={`workout-select-${index}`}>
               Exercise #{index + 1}:
             </label>
-            <select
-              id={`workout-select-${index}`}
-              value={exercise.workout}
-              onChange={(e) => handleChange(index, "workout", e.target.value)}
-            >
-              <option value="">Select an option</option>
-              {optionsList.map((option, optionIndex) => (
-                <option key={optionIndex} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
+            <div className="Dropdown">
+              <input
+                type="text"
+                placeholder="Search exercise"
+                value={exercise.workout}
+                onChange={(e) => {
+                  handleChange(index, "workout", e.target.value);
+                  setSearchTerm(e.target.value);
+                }}
+                onClick={() => setDropdownIndex(index)}
+                onBlur={() => setTimeout(() => setDropdownIndex(null), 100)}
+              />
+              {dropdownIndex === index && (
+                <ul className="Dropdown-menu">
+                  {filteredOptions.length > 0 ? (
+                    filteredOptions.map((option, optionIndex) => (
+                      <li
+                        key={optionIndex}
+                        onClick={() => {
+                          handleChange(index, "workout", option);
+                          setSearchTerm(option);
+                          setDropdownIndex(null);
+                        }}
+                      >
+                        {option}
+                      </li>
+                    ))
+                  ) : (
+                    <li>No results</li>
+                  )}
+                </ul>
+              )}
+            
+
             {index === exercises.length - 1 ? (
               <button className="Add-Workout" onClick={addExercise}>
-                Add
+                <GrAddCircle color="white" />
               </button>
             ) : (
               <button
@@ -225,13 +256,14 @@ const Options = ({ exercises, onExercisesChange }) => {
                 className="Remove-Workout"
                 onClick={() => removeExercise(index)}
               >
-                Remove
+                <GrSubtractCircle color="white" />
               </button>
             )}
+            </div>
           </div>
           <div className="Reps-container">
             <div className="Reps">
-              <label htmlFor={`reps-select-${index}`}>Reps: </label>
+              <label htmlFor={`reps-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="Reps"
@@ -241,7 +273,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               />
             </div>
             <div className="Sets">
-              <label htmlFor={`sets-select-${index}`}>Sets: </label>
+              <label htmlFor={`sets-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="Sets"
@@ -251,7 +283,7 @@ const Options = ({ exercises, onExercisesChange }) => {
               />
             </div>
             <div className="Rir">
-              <label htmlFor={`rir-select-${index}`}>RIR: </label>
+              <label htmlFor={`rir-select-${index}`}></label>
               <input
                 type="text"
                 placeholder="RIR"

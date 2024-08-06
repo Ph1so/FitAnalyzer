@@ -4,7 +4,7 @@ import "./Title.css";
 const Title = () => {
   return (
     <div className="Title-container">
-      <div className="Title">FitAnalyzer</div>
+      <div className="Title">Planner</div>
     </div>
   );
 };

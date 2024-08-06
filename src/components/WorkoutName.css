@@ -1,4 +1,4 @@
-@import url(../fonts.css);
+@import url("../fonts.css");
 
 /* Parent container to center the days-container */
 .parent-container {
@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: auto; /* Optional: This makes sure the container takes full viewport height */
+  font-family: "Supreme", sans-serif;
 }
 
 .days-container {
@@ -15,7 +15,9 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: transparent;
+  background-color: #2a2a2a; /* Changed to white for better contrast */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1vmin; /* Added padding for better spacing */
 }
 
 /* Styling for each button */
@@ -23,9 +25,13 @@
   padding: 1.5vmin 3vmin;
   font-size: 1rem;
   border: transparent;
-  background-color: #f0f0f0;
+  color: #aaa;
+  background-color: #2a2a2a;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-radius: 5px; /* Slightly rounded corners */
+  margin: 0 0.5vmin; /* Spacing between buttons */
 }
 
 /* Styling for the selected button */
@@ -38,8 +44,11 @@
 /* Hover effect for buttons */
 .day-button:hover {
   background-color: #7469b6;
+  transform: scale(1.05); /* Slightly enlarges the button */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Adds shadow */
 }
 
+/* Styling for the WorkoutName input */
 .WorkoutName-input {
   max-width: 30vmin;
   height: 4vmin;
@@ -47,11 +56,17 @@
   border: none;
   border-radius: 4px;
   text-align: center;
-  font-size: 5em; /* Adjust font-size as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin: 0 auto 5vmin auto;*/
-  background-color: transparent;
+  font-size: 2em; /* Adjust font-size as needed */
+  background-color: #2a2a2a;
   color: #9692fe;
+  margin-top: 2vmin; /* Space above the input */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Focus state for the WorkoutName input */
+.WorkoutName-input:focus {
+  outline: none; /* Removes default focus outline */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Adds shadow on focus */
+  background-color: #1e1e1e; /* Darkens background on focus */
 }

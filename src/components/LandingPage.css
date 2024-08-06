@@ -1,0 +1,78 @@
+@import url("../fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@100;200;300;400;500&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 500;
+  background-color: #121212;
+}
+
+.landing-page {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('../images/workout.jpg'); /* Adjust path to your image */
+  background-size: cover;
+  background-position: center;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.05rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.landing-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.6); /* Adjust opacity here */
+}
+
+.landing-title {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #6c63ff;
+  letter-spacing: 0.05rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.continue-button {
+  font-family: "Supreme", sans-serif;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.continue-button:hover {
+  background-color: #5149b6;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.continue-button:active {
+  background-color: #3e358b;
+  transform: translateY(0);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
