@@ -12,6 +12,14 @@ const Options = ({ exercises, onExercisesChange }) => {
 
   // only occurs once when the component is mounted
   const optionsList = [
+    "Lat Pulldown",
+    "Preacher Curl",
+    "Tricep Pushdown",
+    "Barbell Bench Press - Medium Grip",
+    "Hammer Curls",
+    "EZ-Bar Curl",
+    "Barbell Curl",
+    "Concentration curl",
     "Landmine twist",
     "Elbow plank",
     "Bottoms Up",
@@ -45,12 +53,8 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Incline Hammer Curls",
     "Wide-grip barbell curl",
     "EZ-bar spider curl",
-    "Hammer Curls",
-    "EZ-Bar Curl",
     "Zottman Curl",
     "Biceps curl to shoulder press",
-    "Barbell Curl",
-    "Concentration curl",
     "Flexor Incline Dumbbell Curls",
     "Smith Machine Calf Raise",
     "Standing Calf Raises",
@@ -68,7 +72,6 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Dumbbell Flyes",
     "Incline dumbbell bench press",
     "Low-cable cross-over",
-    "Barbell Bench Press - Medium Grip",
     "Chest dip",
     "Decline Dumbbell Flyes",
     "Bodyweight Flyes",
@@ -172,7 +175,6 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Push-Ups - Close Triceps Position",
     "Kneeling cable triceps extension",
     "Single-arm cable triceps extension",
-    "Lat Pulldown"
   ];
 
   const filteredOptions = optionsList.filter(option =>

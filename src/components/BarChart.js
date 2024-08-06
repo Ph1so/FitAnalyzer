@@ -45,6 +45,13 @@ const BarChart = () => {
         const latPulldown = { name: 'Lat Pulldown', muscle: 'lats' };
         allBackExercises.push(latPulldown);
 
+        // Add manually "preacher-curl" exercise
+        const preacherCurl = { name: 'Preacher Curl', muscle: 'biceps' };
+        results[5].push(preacherCurl);
+
+        const tricepPushdown = { name: 'Tricep Pushdown', muscle: 'triceps' };
+        results[6].push(tricepPushdown);
+
         // Set state with results
         setExerciseData({
           bicepExercises: results[5],
