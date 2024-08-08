@@ -41,7 +41,7 @@ input[type="email"] {
     color: #ffffff; /* White text color */
 }
 
-button {
+.waitlistButton {
     padding: 0.75rem 1.5rem;
     background-color: #ffffff; /* White background */
     color: #000000; /* Black text */
@@ -51,7 +51,7 @@ button {
     font-size: 1rem;
 }
 
-button:hover {
+.waitlistButton:hover {
     background-color: #cccccc; /* Light gray hover */
 }
 
