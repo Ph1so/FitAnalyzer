@@ -305,7 +305,7 @@ Options.propTypes = {
       workout: PropTypes.string,
       reps: PropTypes.string,
       sets: PropTypes.string,
-      rir: PropTypes.string,
+      // rir: PropTypes.string,
     })
   ).isRequired,
   onExercisesChange: PropTypes.func.isRequired,

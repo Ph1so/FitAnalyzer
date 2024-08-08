@@ -4,7 +4,8 @@
   font-family: "Supreme", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   padding: 2vmin;
   background-color: #1e1e1e;
   border-radius: 10px;

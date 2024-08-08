@@ -9,6 +9,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <h1 className="navbar-title">FitAnalyzer</h1>
@@ -16,16 +20,16 @@ const Navbar = () => {
         ☰
       </button>
       <div className={`icon-container ${isOpen ? 'open' : ''}`}>
-        <Link to="/home" className="navbar-links">
+        <Link to="/home" className="navbar-links" onClick={closeMenu}>
           Home
         </Link>
-        <Link to="/workout" className="navbar-links">
+        <Link to="/workout" className="navbar-links" onClick={closeMenu}>
           Workout
         </Link>
-        <Link to="/analysis" className="navbar-links">
+        <Link to="/analysis" className="navbar-links" onClick={closeMenu}>
           Analysis
         </Link>
-        <Link to="/waitlist" className="navbar-links">
+        <Link to="/waitlist" className="navbar-links" onClick={closeMenu}>
           Waitlist
         </Link>
       </div>
