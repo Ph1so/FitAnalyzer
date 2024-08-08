@@ -29,7 +29,7 @@ const WaitlistPage = () => {
       <div className="contentWaitlist">
         <h1>Endure AI</h1>
         {/* <p>Unlock Your Peak Performance</p> */}
-        <p class='third'>Be notified for when user account creation and saved workout data across sessions is added!</p>
+        <p className='third'>Be notified for when user account creation and saved workout data across sessions is added!</p>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
@@ -38,7 +38,7 @@ const WaitlistPage = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <button type="submit">Join Waitlist</button>
+          <button className="waitlistButton" type="submit">Join Waitlist</button>
         </form>
         {message && <p>{message}</p>}
       </div>

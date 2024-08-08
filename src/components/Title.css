@@ -3,6 +3,7 @@
 
 .Title-container {
   display: flex;
+  flex-direction: column; 
   font-family: "Rubik", sans-serif;
   justify-content: center;
   align-items: center;
@@ -27,6 +28,13 @@
   -webkit-background-clip: text;
   color: transparent;
   margin-bottom: 0.25em;
+}
+
+.Title-container p {
+  font-size: 1em;
+  text-align: center; /* Center the paragraph */
+  margin-top: 0; /* Ensure there's no extra space above the paragraph */
+  color: #cccccc;
 }
 
 @media (max-width: 480px) {

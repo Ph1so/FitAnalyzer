@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import "./Options.css";
 import { GrAddCircle } from "react-icons/gr";
 import { GrSubtractCircle } from "react-icons/gr";
@@ -7,6 +8,7 @@ import { GrSubtractCircle } from "react-icons/gr";
 const Options = ({ exercises, onExercisesChange }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [dropdownIndex, setDropdownIndex] = useState(null);
+  const navigate = useNavigate();
   // dynamically fetch the names from the database - Flask + python is used to get data using api key -> axios is used to fetch data from python
   // TODO: use axios only - replace flask + python with axios
 
@@ -187,6 +189,7 @@ const Options = ({ exercises, onExercisesChange }) => {
       { workout: "", reps: "", sets: "", rir: "" },
     ];
     onExercisesChange(updatedExercises);
+    setSearchTerm(""); // Reset search term
   };
 
   const removeExercise = (index) => {
@@ -202,6 +205,10 @@ const Options = ({ exercises, onExercisesChange }) => {
       return exercise;
     });
     onExercisesChange(updatedExercises);
+  };
+
+  const handleAnalyzeClick = () => {
+    navigate("/analysis"); // Navigate to analysis page
   };
 
   return (
@@ -232,7 +239,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                         key={optionIndex}
                         onClick={() => {
                           handleChange(index, "workout", option);
-                          setSearchTerm(option);
+                          setSearchTerm(""); // Reset search term after selection
                           setDropdownIndex(null);
                         }}
                       >
@@ -244,21 +251,20 @@ const Options = ({ exercises, onExercisesChange }) => {
                   )}
                 </ul>
               )}
-            
 
-            {index === exercises.length - 1 ? (
-              <button className="Add-Workout" onClick={addExercise}>
-                <GrAddCircle color="white" />
-              </button>
-            ) : (
-              <button
-                style={{ display: "inline-block" }}
-                className="Remove-Workout"
-                onClick={() => removeExercise(index)}
-              >
-                <GrSubtractCircle color="white" />
-              </button>
-            )}
+              {index === exercises.length - 1 ? (
+                <button className="Add-Workout" onClick={addExercise}>
+                  <GrAddCircle color="white" />
+                </button>
+              ) : (
+                <button
+                  style={{ display: "inline-block" }}
+                  className="Remove-Workout"
+                  onClick={() => removeExercise(index)}
+                >
+                  <GrSubtractCircle color="white" />
+                </button>
+              )}
             </div>
           </div>
           <div className="Reps-container">
@@ -282,19 +288,17 @@ const Options = ({ exercises, onExercisesChange }) => {
                 onChange={(e) => handleChange(index, "sets", e.target.value)}
               />
             </div>
-            {/* <div className="Rir">
-              <label htmlFor={`rir-select-${index}`}></label>
-              <input
-                type="text"
-                placeholder="RIR"
-                id={`rir-select-${index}`}
-                value={exercise.rir}
-                onChange={(e) => handleChange(index, "rir", e.target.value)}
-              />
-            </div> */}
           </div>
         </div>
       ))}
+      <div className="Analyze-Button-Container">
+        <button 
+          className="Analyze-Button" 
+          onClick={handleAnalyzeClick}
+        >
+          Analyze
+        </button>
+      </div>
     </div>
   );
 };
@@ -305,7 +309,6 @@ Options.propTypes = {
       workout: PropTypes.string,
       reps: PropTypes.string,
       sets: PropTypes.string,
-      // rir: PropTypes.string,
     })
   ).isRequired,
   onExercisesChange: PropTypes.func.isRequired,

@@ -159,6 +159,25 @@ input[type="text"] {
   margin-right: 0;
 }
 
+.Analyze-Button {
+  background-color: #7469b6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.Analyze-Button-Container {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+   /* Optional: to ensure the button is clearly visible */
+  padding: 20px 0;
+}
+
 @media (max-width: 768px) {
   .Option-container {
     height: 30vmin;
