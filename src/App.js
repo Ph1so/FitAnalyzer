@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import AnalysisPage from "./components/AnalysisPage";
+import WaitlistPage from "./components/WaitlistPage";
 import { WorkoutProvider } from "./components/WorkoutContext"; // Import the WorkoutProvider
 
 // TODO: consider putting the array of day names + workouts here instead of in WorkoutName.js and then passing it down as props
@@ -19,6 +20,7 @@ function App() {
             <Route path="/home" element={<LandingPage />} />
             <Route path="/workout" element={<WorkoutPage />} />
             <Route path="/analysis" element={<AnalysisPage />} />
+            <Route path="/waitlist" element={<WaitlistPage />} />
           </Routes>
         </div>
       </Router>

@@ -29,7 +29,7 @@ const BarChart = () => {
     // Function to handle media query change
     const handleResize = () => {
       if (window.matchMedia('(min-width: 1024px)').matches) {
-        setPointRadius(17); // Larger dot size for large screens
+        setPointRadius(14); // Larger dot size for large screens
       } else {
         setPointRadius(3); // Default dot size for smaller screens
       }
