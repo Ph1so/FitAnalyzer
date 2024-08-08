@@ -174,7 +174,7 @@ input[type="text"] {
     width: 60vmin;
   }
   input[type="text"] {
-    width: 75%;
+    width: 72%;
   }
   select {
     width: 80%;
@@ -182,12 +182,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 1vmin;
+    margin-left: 0.05vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 1vmin;
+    margin-left: 0.05vmin;
   }
 }
 
@@ -198,6 +198,7 @@ input[type="text"] {
   }
   input[type="text"] {
     width: 75%;
+    
   }
   select {
     width: 80%;

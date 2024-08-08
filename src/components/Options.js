@@ -282,7 +282,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 onChange={(e) => handleChange(index, "sets", e.target.value)}
               />
             </div>
-            <div className="Rir">
+            {/* <div className="Rir">
               <label htmlFor={`rir-select-${index}`}></label>
               <input
                 type="text"
@@ -291,7 +291,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 value={exercise.rir}
                 onChange={(e) => handleChange(index, "rir", e.target.value)}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       ))}
