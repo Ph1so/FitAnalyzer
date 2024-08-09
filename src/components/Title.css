@@ -11,7 +11,7 @@
   font-weight: 400; /* Apply bold weight */
   margin-bottom: 5vmin;
   width: 100%;
-  max-width: 60vmin;
+  max-width: 70vmin;
   /* background-color: hsl(0, 0%, 98%); */
   background-color: transparent;
   border-radius: 0.8vmin;
@@ -19,7 +19,7 @@
 }
 .Title {
   font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   font-size: 5.5em;
   background-color: #9692fe;
@@ -27,11 +27,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  margin-bottom: 0.25em;
+  margin-bottom: 0em;
+
 }
 
 .Title-container p {
-  font-size: 1em;
+  font-size: .9em;
   text-align: center; /* Center the paragraph */
   margin-top: 0; /* Ensure there's no extra space above the paragraph */
   color: #cccccc;
@@ -39,7 +40,7 @@
 
 @media (max-width: 480px) {
   .Title {
-    font-size: 4em;
+    font-size: 4.5em;
   }
 }
 

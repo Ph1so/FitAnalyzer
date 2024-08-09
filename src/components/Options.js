@@ -278,6 +278,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 onChange={(e) => handleChange(index, "reps", e.target.value)}
               />
             </div>
+            <div className="X-divider">x</div> 
             <div className="Sets">
               <label htmlFor={`sets-select-${index}`}></label>
               <input

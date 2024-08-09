@@ -29,7 +29,7 @@
   font-size: large;
   justify-content: center;
   align-items: center;
-  margin-left: -1vmin;
+  margin-left: -5vmin;
   background-color: transparent;
   border: none;
   padding-left: 70px;
@@ -46,7 +46,7 @@
   font-size: large;
   justify-content: center;
   align-items: center;
-  margin-left: -1vmin;
+  margin-left: -5vmin;
   background-color: transparent;
   border: none;
   padding-left: 70px;
@@ -144,7 +144,15 @@ input[type="text"] {
 .Reps-container {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align items in the center vertically */
 }
+
+.X-divider {
+  margin: 0px 12.5px 5px -30px; /* Adjust the spacing between Reps and Sets */
+  font-size: 1.5rem; /* Size of the "X" */
+  color: #fff; /* Color of the "X" */
+}
+
 
 .Reps,
 .Sets,
@@ -166,7 +174,7 @@ input[type="text"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .Analyze-Button-Container {
@@ -193,6 +201,9 @@ input[type="text"] {
     height: 31vmin;
     width: 60vmin;
   }
+  .X-divider {
+    margin: 0px 15px 5px -5px;
+  }
   input[type="text"] {
     width: 72%;
   }
@@ -202,12 +213,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 0.05vmin;
+    margin-left: 2vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 0.05vmin;
+    margin-left: 2vmin;
   }
 }
 
@@ -215,6 +226,9 @@ input[type="text"] {
   .Option-container {
     height: 32.5vmin;
     width: 60vmin;
+  }
+  .X-divider {
+    margin: 0px 12.5px 5px 0px;
   }
   input[type="text"] {
     width: 75%;
