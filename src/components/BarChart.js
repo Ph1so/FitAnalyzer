@@ -23,6 +23,27 @@ const BarChart = () => {
   });
   
   const [loaded, setLoaded] = useState(false); // New state for animation
+  const [pointRadius, setPointRadius] = useState(7);
+
+  useEffect(() => {
+    // Function to handle media query change
+    const handleResize = () => {
+      if (window.matchMedia('(min-width: 1024px)').matches) {
+        setPointRadius(14); // Larger dot size for large screens
+      } else {
+        setPointRadius(3); // Default dot size for smaller screens
+      }
+    };
+
+    // Set initial size
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const fetchExercises = async (muscles) => {
@@ -195,6 +216,7 @@ const BarChart = () => {
         borderColor: '#ffffff',
         tension: 0.4,
         type: 'scatter',
+        pointRadius: pointRadius, // Use state to set dot size
       },
       {
         label: 'Sub-Optimal',
@@ -264,6 +286,9 @@ const BarChart = () => {
               // Decrease these values to increase spacing between bars
               barPercentage: 0.6, // Adjust width of the bars
               categoryPercentage: 0.8, // Adjust the spacing between groups of bars
+            },
+            point: {
+              pointRadius: pointRadius, // Use state to set dot size
             },
           },
         }}

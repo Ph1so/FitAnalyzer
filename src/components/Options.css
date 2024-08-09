@@ -4,7 +4,8 @@
   font-family: "Supreme", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
   padding: 2vmin;
   background-color: #1e1e1e;
   border-radius: 10px;
@@ -102,12 +103,13 @@ select {
   overflow-y: auto;
   border: #121212;
   border-radius: 4px;
-  background-color: #2f2e2e;
+  background-color: #333333;
   z-index: 1000;
   padding: 0;
   margin: 0;
   list-style: none; /* Remove default bullets */
   color: #aaa;
+  border-radius: 10px;
 }
 
 .Dropdown-menu li {
@@ -157,6 +159,25 @@ input[type="text"] {
   margin-right: 0;
 }
 
+.Analyze-Button {
+  background-color: #7469b6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.Analyze-Button-Container {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+   /* Optional: to ensure the button is clearly visible */
+  padding: 20px 0;
+}
+
 @media (max-width: 768px) {
   .Option-container {
     height: 30vmin;
@@ -173,7 +194,7 @@ input[type="text"] {
     width: 60vmin;
   }
   input[type="text"] {
-    width: 75%;
+    width: 72%;
   }
   select {
     width: 80%;
@@ -181,12 +202,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 1vmin;
+    margin-left: 0.05vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 1vmin;
+    margin-left: 0.05vmin;
   }
 }
 
@@ -197,6 +218,7 @@ input[type="text"] {
   }
   input[type="text"] {
     width: 75%;
+    
   }
   select {
     width: 80%;
