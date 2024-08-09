@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1 className="navbar-title">FitAnalyzer</h1>
+      <h1 className="navbar-title">Endure AI</h1>
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>

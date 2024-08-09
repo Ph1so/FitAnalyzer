@@ -33,6 +33,7 @@ body {
   font-size: 1.2rem;
   margin: 0;
   margin-right: auto;
+  text-decoration: underline;
 }
 
 .navbar-menu {
