@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1 className="navbar-title">Endure AI</h1>
+      <div className="navbar-title">Endure AI</div>
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>
