@@ -12,7 +12,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <h1 className="landing-title">Welcome to Endure AI</h1>
+      <h1 className="landing-title">Endure AI</h1>
       <button className="continue-button" onClick={handleContinue}>
         Continue as Guest
       </button>
