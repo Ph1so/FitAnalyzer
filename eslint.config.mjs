@@ -13,6 +13,7 @@ export default [
     settings: {
       react: {
         version: "detect",
+        node: true,
       },
     },
   },
