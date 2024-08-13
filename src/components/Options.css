@@ -249,7 +249,7 @@ input[type="text"] {
 
 @media (max-width: 385px) {
   .Option-container {
-    height: 32.5vmin;
+    height: 40vmin;
     width: 60vmin;
   }
   input[type="text"] {
@@ -272,10 +272,20 @@ input[type="text"] {
 
 @media (max-width: 340px) {
   .Option-container {
-    height: 40vmin;
+    height: 50vmin;
   }
   select,
   input[type="text"] {
     width: 70%;
+  }
+}
+
+@media (max-width: 305px) {
+  .Option-container {
+    height: 55vmin;
+  }
+  select,
+  input[type="text"] {
+    width: 65%;
   }
 }
