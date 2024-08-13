@@ -212,7 +212,7 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 2vmin;
+    margin-left: auto;
   }
   .Remove-Workout {
     padding-left: 10px;
@@ -238,12 +238,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 1vmin;
+    margin-left: auto;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 1vmin;
+    margin-left: -1vmin;
   }
 }
 
