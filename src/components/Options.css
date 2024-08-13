@@ -76,7 +76,7 @@ select {
   border-radius: 4px;
   border: 0px solid #ddd;
   color: #fff;
-  background-color: #2A2A2A;
+  background-color: #2a2a2a;
   margin-bottom: 1vmin;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +115,7 @@ select {
 .Dropdown-menu li {
   padding: 8px;
   cursor: pointer;
-  border-bottom: 1px solid #121212;; /* Add line between items */
+  border-bottom: 1px solid #121212; /* Add line between items */
 }
 
 .Dropdown-menu li:hover {
@@ -128,7 +128,7 @@ input[type="text"] {
   font-size: 1rem;
   border-radius: 4px;
   border: 0px solid #ddd;
-  background-color: #2A2A2A;
+  background-color: #2a2a2a;
   margin-bottom: 1vmin;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -152,7 +152,6 @@ input[type="text"] {
   font-size: 1.5rem; /* Size of the "X" */
   color: #fff; /* Color of the "X" */
 }
-
 
 .Reps,
 .Sets,
@@ -182,17 +181,17 @@ input[type="text"] {
   width: 100%;
   display: flex;
   justify-content: center;
-   /* Optional: to ensure the button is clearly visible */
+  /* Optional: to ensure the button is clearly visible */
   padding: 20px 0;
 }
 
 @media (max-width: 768px) {
   .Option-container {
-    height: 30vmin;
+    height: 18vmax;
   }
   select,
   input[type="text"] {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -232,7 +231,6 @@ input[type="text"] {
   }
   input[type="text"] {
     width: 75%;
-    
   }
   select {
     width: 80%;
@@ -249,7 +247,7 @@ input[type="text"] {
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 385px) {
   .Option-container {
     height: 32.5vmin;
     width: 60vmin;
@@ -263,7 +261,7 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 1vmin;
+    margin-left: 0.1vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
@@ -272,14 +270,12 @@ input[type="text"] {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 340px) {
   .Option-container {
     height: 40vmin;
   }
   select,
   input[type="text"] {
-    width: 30%;
+    width: 70%;
   }
 }
-
-
