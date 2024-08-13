@@ -233,7 +233,7 @@ input[type="text"] {
     width: 75%;
   }
   select {
-    width: 80%;
+    width: 65%;
   }
   .Add-Workout {
     padding-left: 10px;
@@ -253,10 +253,10 @@ input[type="text"] {
     width: 60vmin;
   }
   input[type="text"] {
-    width: 73%;
+    width: 60%;
   }
   select {
-    width: 80%;
+    width: 60%;
   }
   .Add-Workout {
     padding-left: 10px;
