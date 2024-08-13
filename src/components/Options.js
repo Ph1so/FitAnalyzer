@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import "./Options.css";
-import { GrAddCircle } from "react-icons/gr";
+import { FaCirclePlus } from "react-icons/fa6";
 import { GrSubtractCircle } from "react-icons/gr";
 
 const Options = ({ exercises, onExercisesChange }) => {
@@ -257,7 +257,7 @@ const Options = ({ exercises, onExercisesChange }) => {
 
               {index === exercises.length - 1 ? (
                 <button className="Add-Workout" onClick={addExercise}>
-                  <GrAddCircle color="#9692fe" />
+                  <FaCirclePlus color="#9692fe" />
                 </button>
               ) : (
                 <button

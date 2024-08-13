@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-     <Link to="/home" className="navbar-title" onClick={closeMenu}>
+      <Link to="/" className="navbar-title" onClick={closeMenu}>
         Endure AI
       </Link>
       <button className="menu-toggle" onClick={toggleMenu}>
