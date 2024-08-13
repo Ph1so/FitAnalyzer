@@ -276,7 +276,16 @@ input[type="text"] {
   }
   select,
   input[type="text"] {
-    width: 70%;
+    width: 50%;
+  }
+  select {
+    width: 50%;
+  }
+  .Add-Workout {
+    margin-left: auto;
+  }
+  .Remove-Workout {
+    margin-left: auto;
   }
 }
 
