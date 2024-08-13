@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 500;
   background-color: #121212;
 }
@@ -21,7 +21,7 @@ body {
   background-image: url("../images/workout.jpg"); /* Adjust path to your image */
   background-size: cover;
   background-position: center;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: "Arial", sans-serif;
   color: #faf9f6; /* Light color for better readability */
 }
 
@@ -36,15 +36,15 @@ body {
 }
 
 .landing-title {
-  font-family: "Merriweather", "Merriweather Sans", -apple-system,
+  font-family: "Helvetica", "Helvetica Neue", -apple-system,
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
   font-weight: 700; /* Bold for emphasis */
   font-size: 4rem; /* Larger size for prominence */
   color: #faf9f6; /* Neutral and sophisticated color */
-  margin-bottom: 3rem; /* Increased margin for spacing */
-  letter-spacing: 0.05rem;
+  margin-bottom: 3.5rem; /* Increased margin for spacing */
+  letter-spacing: .1rem;
   position: relative;
   z-index: 1;
 
