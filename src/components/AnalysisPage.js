@@ -17,7 +17,7 @@ const AnalysisPage = () => {
     <div className="analysis-page">
       <div className='Title2-container'>
       <div className="Title2">Analyzer</div>
-      <p>View if your total weekly sets per muscle group is optimal!</p>
+      <p>View if your weekly sets per muscle group is optimal!</p>
       </div>
       <div className="content">
         <BarChart />
