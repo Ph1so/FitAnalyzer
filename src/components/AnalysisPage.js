@@ -17,8 +17,7 @@ const AnalysisPage = () => {
     <div className="analysis-page">
       <div className="content">
         <BarChart />
-      </div>
-      <div className="Planner-Button-Container">
+        <div className="Planner-Button-Container">
         <button 
           className="Planner-Button" 
           onClick={handlePlannerClick}
@@ -26,6 +25,19 @@ const AnalysisPage = () => {
           Return to Planner
         </button>
       </div>
+      </div>
+      <footer className="source">
+        <p>
+          Source:{" "}
+          <a
+            href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5684266/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Research on Exercise and Muscle Groups
+          </a>
+        </p>
+        </footer>
     </div>
   );
 };
