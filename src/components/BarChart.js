@@ -266,6 +266,10 @@ const BarChart = () => {
               grid: {
                 color: '#808080',
               },
+              title: {
+                display: true,
+                text: 'Total Sets',
+              },
             },
             y: {
               beginAtZero: true,
@@ -274,9 +278,7 @@ const BarChart = () => {
               },
               stacked: true,
               ticks: {
-                // Increase the padding to avoid overlapping
                 padding: 10,
-                // Show every label
                 autoSkip: false,
               },
             },
@@ -293,15 +295,18 @@ const BarChart = () => {
           },
         }}
       />
+      <div className="chart-description">
+      </div>
       <div className="warning-container">
         <p className="warning-message">
-          {warnings.considerMore && `Consider more: ${warnings.considerMore}`}
+          {warnings.considerMore && `Consider more sets for ${warnings.considerMore}`}
         </p>
         <p className="warning-message">
-          {warnings.considerLess && `Consider less: ${warnings.considerLess}`}
+          {warnings.considerLess && `Consider less sets for ${warnings.considerLess}`}
         </p>
       </div>
     </div>
+    
   );
 };
 

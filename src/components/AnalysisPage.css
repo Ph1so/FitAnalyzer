@@ -1,63 +1,72 @@
+.analysis-page {
+  min-height: 100vh; /* Ensure the container takes at least full viewport height */
+  display: flex;
+  flex-direction: column;
+}
 
-  .analysis-page {
-    min-height: 100vh; /* Ensure the container takes at least full viewport height */
-    display: flex;
-    flex-direction: column;
+.content {
+  flex: 1; /* This will push the footer to the bottom */
+  padding: 20px;
+}
+
+footer.source {
+  padding: 10px;
+  background-color: rgba(51, 51, 51, 0.8); /* Light grey background for the footer */
+  text-align: center; /* Center align the text */
+}
+
+.source p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.source a {
+  color: #007BFF; /* Blue color for the link */
+  text-decoration: none;
+}
+
+.source a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.chartDesc {
+  text-align: center; /* Center-align text */
+  margin-top: 2vmin; /* Space above the description */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .source p {
+    
+    font-size: 12px; /* Smaller text size for mobile devices */
   }
-  
-  .content {
-    flex: 1; /* This will push the footer to the bottom */
-    padding: 20px;
+
+  .source a {
+    font-size: 12px; /* Adjust link font size for mobile */
   }
-  
-  footer.source {
-    padding: 10px;
-    background-color: rgba(51, 51, 51, 0.8); /* Light grey background for the footer */
-    text-align: center; /* Center align the text */
+
+  .chartDesc {
+    font-size: 0.8rem; /* Smaller font size on mobile devices */
     
   }
-  
-  .source p {
-    margin: 0;
-    font-size: 14px;
-    color: #ffffff;
-  }
-  
-  .source a {
-    color: #007BFF; /* Blue color for the link */
-    text-decoration: none;
-  }
-  
-  .source a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
-  
-  .Planner-Button {
-    background-color: #9692fe;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .Planner-Button-Container {
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-     /* Optional: to ensure the button is clearly visible */
-    padding: 20px 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .source p {
-      font-size: 12px; /* Smaller text size for mobile devices */
-    }
-  
-    .source a {
-      font-size: 12px; /* Adjust link font size for mobile */
-    }
-  }
+}
+
+.Planner-Button {
+  background-color: #9692fe;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Planner-Button-Container {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Optional: to ensure the button is clearly visible */
+  padding: 20px 0;
+}

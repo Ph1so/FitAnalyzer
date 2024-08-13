@@ -20,6 +20,26 @@
   border-radius: 10px;
 }
 
+.chart-description {
+  text-align: center; /* Center-align the description */
+  margin-top: 2vmin;
+}
+
+.warning-message {
+  display: flex;
+  flex-direction: column; /* Stack warnings vertically */
+  gap: 10px; /* Space between lines of warnings */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+  font-size: 1rem; /* Default font size */
+  text-align: center; /* Center-align text */
+}
+
+/* Show warning message after 1 second */
+.bar-chart-container.loaded .warning-message {
+  opacity: 1; /* Make visible */
+}
+
 @media (max-width: 768px) {
   .bar-chart-container {
     max-width: 90vw; /* Adjust max-width for tablets */
@@ -31,19 +51,8 @@
     max-width: 100vw; /* Adjust max-width for mobile devices */
     padding: 1vmin;
   }
-}
 
-/* Hide warning message initially */
-.warning-message {
-  display: flex;
-  flex-direction: column; /* Stack warnings vertically */
-  gap: 10px; /* Space between lines of warnings */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 1s ease-in-out; /* Smooth transition */
+  .warning-message {
+    font-size: 0.8rem; /* Smaller font size on mobile devices */
+  }
 }
-
-/* Show warning message after 1 second */
-.bar-chart-container.loaded .warning-message {
-  opacity: 1; /* Make visible */
-}
-

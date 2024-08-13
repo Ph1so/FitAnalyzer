@@ -17,6 +17,9 @@ const AnalysisPage = () => {
     <div className="analysis-page">
       <div className="content">
         <BarChart />
+        <p className = "chartDesc">
+        Colored bars the dot lies in indicates if this amount is optimal for growth for this muscle group 
+      </p>
         <div className="Planner-Button-Container">
         <button 
           className="Planner-Button" 
