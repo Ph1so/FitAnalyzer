@@ -261,12 +261,12 @@ input[type="text"] {
   .Add-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 0.1vmin;
+    margin-left: 0.05vmin;
   }
   .Remove-Workout {
     padding-left: 10px;
     margin-top: 0%;
-    margin-left: 0.1vmin;
+    margin-left: 0.05vmin;
   }
 }
 
@@ -287,5 +287,15 @@ input[type="text"] {
   select,
   input[type="text"] {
     width: 65%;
+  }
+}
+
+@media (max-width: 260px) {
+  .Option-container {
+    height: 65vmin;
+  }
+  select,
+  input[type="text"] {
+    width: 60%;
   }
 }
