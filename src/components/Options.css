@@ -224,7 +224,7 @@ input[type="text"] {
 @media (max-width: 400px) {
   .Option-container {
     height: 32.5vmin;
-    width: 60vmin;
+    width: 70vmin;
   }
   .X-divider {
     margin: 0px 12.5px 5px 0px;
