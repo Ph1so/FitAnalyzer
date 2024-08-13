@@ -288,6 +288,12 @@ input[type="text"] {
   input[type="text"] {
     width: 65%;
   }
+  .Add-Workout {
+    margin-left: auto;
+  }
+  .Remove-Workout {
+    margin-left: auto;
+  }
 }
 
 @media (max-width: 260px) {
