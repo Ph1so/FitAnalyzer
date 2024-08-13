@@ -179,7 +179,7 @@ const Options = ({ exercises, onExercisesChange }) => {
     "Single-arm cable triceps extension",
   ];
 
-  const filteredOptions = optionsList.filter(option =>
+  const filteredOptions = optionsList.filter((option) =>
     option.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -216,7 +216,10 @@ const Options = ({ exercises, onExercisesChange }) => {
       {exercises.map((exercise, index) => (
         <div className="Option-container" key={index}>
           <div className="Workout-choice">
-            <label className="Exercise-Number" htmlFor={`workout-select-${index}`}>
+            <label
+              className="Exercise-Number"
+              htmlFor={`workout-select-${index}`}
+            >
               Exercise #{index + 1}:
             </label>
             <div className="Dropdown">
@@ -254,7 +257,7 @@ const Options = ({ exercises, onExercisesChange }) => {
 
               {index === exercises.length - 1 ? (
                 <button className="Add-Workout" onClick={addExercise}>
-                  <GrAddCircle color="white" />
+                  <GrAddCircle color="#9692fe" />
                 </button>
               ) : (
                 <button
@@ -262,7 +265,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                   className="Remove-Workout"
                   onClick={() => removeExercise(index)}
                 >
-                  <GrSubtractCircle color="white" />
+                  <GrSubtractCircle color="#9692fe" />
                 </button>
               )}
             </div>
@@ -278,7 +281,7 @@ const Options = ({ exercises, onExercisesChange }) => {
                 onChange={(e) => handleChange(index, "reps", e.target.value)}
               />
             </div>
-            <div className="X-divider">x</div> 
+            <div className="X-divider">x</div>
             <div className="Sets">
               <label htmlFor={`sets-select-${index}`}></label>
               <input
@@ -293,10 +296,7 @@ const Options = ({ exercises, onExercisesChange }) => {
         </div>
       ))}
       <div className="Analyze-Button-Container">
-        <button 
-          className="Analyze-Button" 
-          onClick={handleAnalyzeClick}
-        >
+        <button className="Analyze-Button" onClick={handleAnalyzeClick}>
           Analyze
         </button>
       </div>
