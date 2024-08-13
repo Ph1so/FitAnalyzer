@@ -31,25 +31,6 @@
   .source a:hover {
     text-decoration: underline; /* Underline on hover */
   }
-
-  .Planner-Button {
-    background-color: #9692fe;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .Planner-Button-Container {
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-     /* Optional: to ensure the button is clearly visible */
-    padding: 20px 0;
-  }
   
   /* Responsive Design */
   @media (max-width: 600px) {
