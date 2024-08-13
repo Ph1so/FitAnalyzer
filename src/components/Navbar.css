@@ -17,7 +17,7 @@ body {
   color: #fff;
   z-index: 1000; /* Ensures the navbar is on top */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
-  backdrop-filter: blur(10px); /* Adds blur effect for better readability */
+  backdrop-filter: blur(1px); /* Adds blur effect for better readability */
 }
 
 .navbar-logo {
