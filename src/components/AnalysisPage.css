@@ -2,11 +2,14 @@
   min-height: 100vh; /* Ensure the container takes at least full viewport height */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
   flex: 1; /* This will push the footer to the bottom */
   padding: 20px;
+  position: relative;
 }
 
 footer.source {
@@ -14,6 +17,44 @@ footer.source {
   background-color: rgba(51, 51, 51, 0.8); /* Light grey background for the footer */
   text-align: center; /* Center align the text */
 }
+
+.Title2-container {
+  display: flex;
+  flex-direction: column; 
+  font-family: "Rubik", sans-serif;
+  justify-content: center;
+  align-items: center;
+  padding: 2vmin;
+  font-weight: 400; /* Apply bold weight */
+  margin-bottom: 0vmin;
+  width: 100%;
+  max-width: 70vmin;
+  /* background-color: hsl(0, 0%, 98%); */
+  background-color: transparent;
+  border-radius: 0.8vmin;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+}
+.Title2 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 5.5em;
+  background-color: #9692fe;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0em;
+
+}
+
+.Title2-container p {
+  font-size: .9em;
+  text-align: center; /* Center the paragraph */
+  margin-top: 0; /* Ensure there's no extra space above the paragraph */
+  color: #cccccc;
+}
+
 
 .source p {
   margin: 0;
@@ -28,28 +69,6 @@ footer.source {
 
 .source a:hover {
   text-decoration: underline; /* Underline on hover */
-}
-
-.chartDesc {
-  text-align: center; /* Center-align text */
-  margin-top: 2vmin; /* Space above the description */
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  .source p {
-    
-    font-size: 12px; /* Smaller text size for mobile devices */
-  }
-
-  .source a {
-    font-size: 12px; /* Adjust link font size for mobile */
-  }
-
-  .chartDesc {
-    font-size: 0.8rem; /* Smaller font size on mobile devices */
-    
-  }
 }
 
 .Planner-Button {
@@ -69,4 +88,16 @@ footer.source {
   justify-content: center;
   /* Optional: to ensure the button is clearly visible */
   padding: 20px 0;
+}
+
+@media (max-width: 480px) {
+  .Title2 {
+    font-size: 4.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .Title2 {
+    font-size: 4em;
+  }
 }

@@ -21,6 +21,8 @@ const BarChart = () => {
     considerMore: [],
     considerLess: []
   });
+  // State for handling the pop-up visibility
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
   
   const [loaded, setLoaded] = useState(false); // New state for animation
   const [pointRadius, setPointRadius] = useState(7);
@@ -305,6 +307,21 @@ const BarChart = () => {
           {warnings.considerLess && `Consider less sets for ${warnings.considerLess}`}
         </p>
       </div>
+      {/* Question Mark Button */}
+<button 
+  className="question-mark-button" 
+  onClick={() => setIsPopupVisible(!isPopupVisible)}
+>
+  ?
+</button>
+
+{/* Pop-up */}
+{isPopupVisible && (
+  <div className="popup">
+    <p>Colored bars the dot lies in indicates if this amount is optimal for growth for this muscle group 
+    </p>
+  </div>
+)}
     </div>
     
   );

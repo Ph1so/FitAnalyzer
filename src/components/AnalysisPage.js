@@ -15,11 +15,12 @@ const AnalysisPage = () => {
 
   return (
     <div className="analysis-page">
+      <div className='Title2-container'>
+      <div className="Title2">Analyzer</div>
+      <p>View if your total weekly sets per muscle group is optimal!</p>
+      </div>
       <div className="content">
         <BarChart />
-        <p className = "chartDesc">
-        Colored bars the dot lies in indicates if this amount is optimal for growth for this muscle group 
-      </p>
         <div className="Planner-Button-Container">
         <button 
           className="Planner-Button" 

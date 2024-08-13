@@ -1,6 +1,6 @@
 .bar-chart-container {
   margin-top: 2vmin;
-  max-width: 80vw; /* Maximum width set to 80% of the viewport width */
+  max-width: 80vw;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative; /* Added to position the button within this container */
 }
 
 .bar-chart-container canvas {
@@ -35,6 +36,40 @@
   text-align: center; /* Center-align text */
 }
 
+.question-mark-button {
+  position: absolute;
+  top: 10px;  /* Adjust this value to align the button as desired */
+  right: 10px;  /* Adjust this value to align the button as desired */
+  background-color: #9692fe;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
+}
+
+.popup p {
+  color: #121212
+}
+
+
 /* Show warning message after 1 second */
 .bar-chart-container.loaded .warning-message {
   opacity: 1; /* Make visible */
@@ -50,6 +85,19 @@
   .bar-chart-container {
     max-width: 100vw; /* Adjust max-width for mobile devices */
     padding: 1vmin;
+  }
+
+  .popup {
+    width: 150px; /* Smaller width for mobile */
+    padding: 10px; /* Adjust padding for mobile */
+    font-size: 14px;
+  }
+  .question-mark-button {
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    right: 0px;
+    font-size: 12px;
   }
 
   .warning-message {
