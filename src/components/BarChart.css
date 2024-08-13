@@ -5,7 +5,7 @@
   height: auto;
   margin: 0 auto;
   padding: 2vmin;
-  background-color: #1e1e1e;
+  background-color: #121212;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: white;
@@ -16,7 +16,7 @@
 }
 
 .bar-chart-container canvas {
-  background-color: #1e1e1e;
+  background-color: #121212;
   border-radius: 10px;
 }
 

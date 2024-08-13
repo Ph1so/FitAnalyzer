@@ -39,6 +39,7 @@
   background-color: #9692fe; /* Highlight color */
   color: #fff;
   border-color: #9692fe;
+  padding: 1.5vmin 3vmin;
 }
 
 /* Hover effect for buttons */
@@ -69,4 +70,18 @@
   outline: none; /* Removes default focus outline */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Adds shadow on focus */
   background-color: #1e1e1e; /* Darkens background on focus */
+}
+
+@media (max-width: 480px) {
+  .days-container {
+    width: 95%; /* Adjust this percentage to reduce width */
+    max-width: 90vmin; /* Or set a maximum width in viewmin */
+  }
+  .day-button{
+    padding: 1.5vmin 2vmin;
+    margin: 0 0.3vmin; /* Reduce spacing between buttons */
+    min-width: 6vmin; /* Set a minimum width for consistency */
+    width: auto; /* Adjusts width based on content */
+    text-align: center; 
+  }
 }

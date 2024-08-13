@@ -1,14 +1,14 @@
 // WorkoutName.js
-import React, { useState } from "react";
-import { useWorkoutContext } from "./WorkoutContext";
-import "./WorkoutName.css";
-import Options from "./Options";
-import BarChart from "./BarChart";
+import React, { useState } from 'react';
+import { useWorkoutContext } from './WorkoutContext';
+import './WorkoutName.css';
+import Options from './Options';
+import BarChart from './BarChart';
 
 const WorkoutName = () => {
   const { workouts, setWorkouts } = useWorkoutContext();
-  const [selectedDay, setSelectedDay] = useState("Mon");
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const [selectedDay, setSelectedDay] = useState('Mon');
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
   const handleInputChange = (event) => {
     const updatedWorkouts = {
@@ -35,7 +35,7 @@ const WorkoutName = () => {
         {days.map((day) => (
           <button
             key={day}
-            className={`day-button ${selectedDay === day ? "selected" : ""}`}
+            className={`day-button ${selectedDay === day ? 'selected' : ''}`}
             onClick={() => handleButtonClick(day)}
           >
             {day}
@@ -46,7 +46,7 @@ const WorkoutName = () => {
         <input
           className="WorkoutPlanner-input"
           type="text"
-          placeholder="Name your workout"
+          placeholder="Name"
           value={workouts[selectedDay].name}
           onChange={handleInputChange}
         />
