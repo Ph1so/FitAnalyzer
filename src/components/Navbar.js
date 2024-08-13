@@ -21,11 +21,7 @@ const Navbar = () => {
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>
-<<<<<<< HEAD
-      <div className={`icon-container ${isOpen ? 'open' : ''}`}>
-=======
       <div className={`icon-container ${isOpen ? "open" : ""}`}>
->>>>>>> 81638d0 (remove home from navbar - endure ai is now the hyper link)
         <Link to="/workout" className="navbar-links" onClick={closeMenu}>
           Workout
         </Link>
