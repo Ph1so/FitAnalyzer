@@ -318,7 +318,8 @@ const BarChart = () => {
 {/* Pop-up */}
 {isPopupVisible && (
   <div className="popup">
-    <p>Colored bars the dot lies in indicates if this amount is optimal for growth for this muscle group 
+     <p>The white dot indicate the weekly total sets for this muscle group by the user. </p>
+    <p>The colored bars the dot lies in indicates if this amount of weekly sets is sub-optimal, optimal, minimal, or junk volume for growth for this muscle group. 
     </p>
   </div>
 )}
