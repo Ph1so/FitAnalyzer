@@ -1,10 +1,10 @@
 @import url("../fonts.css");
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@100;200;300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   background-color: #121212;
 }
@@ -18,15 +18,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-image: url('../images/workout.jpg'); /* Adjust path to your image */
+  background-image: url("../images/workout.jpg"); /* Adjust path to your image */
   background-size: cover;
   background-position: center;
-  font-family: 'Merriweather Sans', sans-serif;
-  color: #FAF9F6; /* Light color for better readability */
+  font-family: "Merriweather Sans", sans-serif;
+  color: #faf9f6; /* Light color for better readability */
 }
 
 .landing-page::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -36,13 +36,15 @@ body {
 }
 
 .landing-title {
-  font-family: 'Merriweather', "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Merriweather", "Merriweather Sans", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   font-weight: 700; /* Bold for emphasis */
   font-size: 4rem; /* Larger size for prominence */
-  color: #FAF9F6; /* Neutral and sophisticated color */
+  color: #faf9f6; /* Neutral and sophisticated color */
   margin-bottom: 3rem; /* Increased margin for spacing */
   letter-spacing: 0.05rem;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better text visibility */
   position: relative;
   z-index: 1;
 
@@ -73,7 +75,7 @@ body {
 }
 
 .landing-title::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 80px;
   height: 4px;
@@ -117,7 +119,11 @@ body {
   left: 50%;
   width: 300%;
   height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3),
+    transparent 70%
+  );
   transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -135,7 +141,7 @@ body {
   .landing-title {
     font-size: 3rem;
   }
-  
+
   .continue-button {
     font-size: 1rem;
     padding: 0.5rem 1rem;
