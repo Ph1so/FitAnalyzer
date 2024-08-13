@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,22 +15,18 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-title">Endure AI</div>
+      <Link to="/home" className="navbar-title" onClick={closeMenu}>
+        Endure AI
+      </Link>
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>
-      <div className={`icon-container ${isOpen ? 'open' : ''}`}>
-        <Link to="/home" className="navbar-links" onClick={closeMenu}>
-          Home
-        </Link>
+      <div className={`icon-container ${isOpen ? "open" : ""}`}>
         <Link to="/workout" className="navbar-links" onClick={closeMenu}>
           Workout
         </Link>
         <Link to="/analysis" className="navbar-links" onClick={closeMenu}>
           Analysis
-        </Link>
-        <Link to="/waitlist" className="navbar-links" onClick={closeMenu}>
-          Waitlist
         </Link>
       </div>
     </nav>
