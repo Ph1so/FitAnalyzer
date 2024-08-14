@@ -185,6 +185,31 @@ input[type="text"] {
   padding: 20px 0;
 }
 
+@media (max-width: 900px) {
+  .Option-container {
+    height: 18vmax;
+    width: 60vmin;
+  }
+  .Add-Workout {
+    padding-left: 10px;
+    margin-top: 0%;
+    margin-left: auto;
+  }
+  .Remove-Workout {
+    padding-left: 10px;
+    margin-top: 0%;
+    margin-left: auto;
+  }
+  select,
+  input[type="text"] {
+    width: 70%;
+  }
+  .X-divider {
+    margin: 0px 15px 5px -5px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .Option-container {
     height: 18vmax;
