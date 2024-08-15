@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +19,7 @@ const Navbar = () => {
         Endure AI
       </Link>
       <button className="menu-toggle" onClick={toggleMenu}>
-        <IoMenu />
+        ☰
       </button>
       <div className={`icon-container ${isOpen ? "open" : ""}`}>
         <Link to="/workout" className="navbar-links" onClick={closeMenu}>
