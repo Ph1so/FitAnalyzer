@@ -24,14 +24,22 @@
   text-decoration-color: #7469b6;
 }
 
+.workout-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
 .Add-Workout,
 .Remove-Workout {
-  font-family: "Supreme", sans-serif;
   font-size: 1.2em;
   background-color: transparent;
   border: none;
-  padding-left: 2em;
-  margin-top: 1em;
+  padding-left: 1em;
+  margin-left: 1em;
+  margin-bottom: 0.2em;
 }
 
 .Add-Workout:hover,
@@ -108,6 +116,7 @@ input[type="text"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: -1em;
 }
 
 .X-divider {
@@ -145,83 +154,4 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   padding: 2em 0;
-}
-
-@media (max-width: 768px) {
-  .Option-container {
-    padding: 1em;
-  }
-  select,
-  input[type="text"] {
-    width: 70%;
-  }
-}
-
-@media (max-width: 480px) {
-  .Option-container {
-    padding: 1em;
-    width: 90%;
-  }
-  .X-divider {
-    margin: 0 1em 0.5em;
-  }
-  input[type="text"],
-  select {
-    width: 80%;
-  }
-  .Add-Workout,
-  .Remove-Workout {
-    padding-left: 1em;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .Option-container {
-    padding: 1em;
-  }
-  input[type="text"],
-  select {
-    width: 75%;
-  }
-}
-
-@media (max-width: 385px) {
-  .Option-container {
-    padding: 1em;
-  }
-  input[type="text"],
-  select {
-    width: 70%;
-  }
-}
-
-@media (max-width: 340px) {
-  .Option-container {
-    padding: 1em;
-  }
-  input[type="text"],
-  select {
-    width: 60%;
-  }
-}
-
-@media (max-width: 305px) {
-  .Option-container {
-    padding: 1em;
-  }
-  input[type="text"],
-  select {
-    width: 65%;
-  }
-}
-
-@media (max-width: 260px) {
-  .Option-container {
-    padding: 1em;
-  }
-  input[type="text"],
-  select {
-    width: 60%;
-  }
 }

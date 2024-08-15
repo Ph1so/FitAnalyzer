@@ -216,12 +216,27 @@ const Options = ({ exercises, onExercisesChange }) => {
       {exercises.map((exercise, index) => (
         <div className="Option-container" key={index}>
           <div className="Workout-choice">
-            <label
-              className="Exercise-Number"
-              htmlFor={`workout-select-${index}`}
-            >
-              Exercise #{index + 1}:
-            </label>
+            <div className="workout-title">
+              <label
+                className="Exercise-Number"
+                htmlFor={`workout-select-${index}`}
+              >
+                Exercise #{index + 1}:
+              </label>
+              {index === exercises.length - 1 ? (
+                <button className="Add-Workout" onClick={addExercise}>
+                  <FaCirclePlus color="#9692fe" />
+                </button>
+              ) : (
+                <button
+                  style={{ display: "inline-block" }}
+                  className="Remove-Workout"
+                  onClick={() => removeExercise(index)}
+                >
+                  <GrSubtractCircle color="#9692fe" />
+                </button>
+              )}
+            </div>
             <div className="Dropdown">
               <input
                 type="text"
@@ -253,20 +268,6 @@ const Options = ({ exercises, onExercisesChange }) => {
                     <li>No results</li>
                   )}
                 </ul>
-              )}
-
-              {index === exercises.length - 1 ? (
-                <button className="Add-Workout" onClick={addExercise}>
-                  <FaCirclePlus color="#9692fe" />
-                </button>
-              ) : (
-                <button
-                  style={{ display: "inline-block" }}
-                  className="Remove-Workout"
-                  onClick={() => removeExercise(index)}
-                >
-                  <GrSubtractCircle color="#9692fe" />
-                </button>
               )}
             </div>
           </div>
