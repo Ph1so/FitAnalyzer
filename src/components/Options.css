@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  padding: 1.75em;
   background-color: #1e1e1e;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,6 @@
   background-color: transparent;
   border: none;
   margin-bottom: 0.2em;
-  margin-right: -0.2em;
 }
 
 .Add-Workout:hover,
@@ -47,8 +46,7 @@
   cursor: pointer;
 }
 
-.Workout-choice,
-.Reps-container {
+.Workout-choice {
   margin-bottom: 1em;
   width: 100%;
 }
@@ -67,7 +65,6 @@ input[type="text"] {
   border: 1px solid #ddd;
   color: #fff;
   background-color: #2a2a2a;
-  margin-bottom: 1em;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -115,26 +112,12 @@ input[type="text"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: -1em;
 }
 
 .X-divider {
-  margin: 0 0.5em 0.8em 0.5em;
+  margin: 0 0.3em 0.3em 0.5em;
   font-size: 1.5rem;
   color: #fff;
-}
-
-.Reps,
-.Sets,
-.Rir {
-  flex: 1;
-  margin-right: 0.5em;
-}
-
-.Reps:last-child,
-.Sets:last-child,
-.Rir:last-child {
-  margin-right: 0;
 }
 
 .Analyze-Button {
