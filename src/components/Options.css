@@ -6,16 +6,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em; /* Changed from vmin to em */
+  padding: 2em;
   background-color: #1e1e1e;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 70%; /* Changed from vmin to % */
-  max-width: 500px; /* Added a max-width for better control */
-  height: auto; /* Allow height to adjust based on content */
-  min-height: 150px; /* Set a fixed minimum height */
+  width: 70%;
+  max-width: 500px;
+  height: auto;
+  min-height: 150px;
   margin: 0 auto;
-  margin-top: 2em; /* Changed from vmin to em */
+  margin-top: 2em;
 }
 
 .Exercise-Number {
@@ -30,8 +30,8 @@
   font-size: 1.2em;
   background-color: transparent;
   border: none;
-  padding-left: 2em; /* Adjusted padding */
-  margin-top: 1em; /* Adjusted margin */
+  padding-left: 2em;
+  margin-top: 1em;
 }
 
 .Add-Workout:hover,
@@ -42,7 +42,7 @@
 
 .Workout-choice,
 .Reps-container {
-  margin-bottom: 1em; /* Changed from vmax to em */
+  margin-bottom: 1em;
   width: 100%;
 }
 
@@ -60,7 +60,7 @@ input[type="text"] {
   border: 1px solid #ddd;
   color: #fff;
   background-color: #2a2a2a;
-  margin-bottom: 1em; /* Changed from vmin to em */
+  margin-bottom: 1em;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -111,7 +111,7 @@ input[type="text"] {
 }
 
 .X-divider {
-  margin: 0 0.8em 0.5em; /* Adjusted margin */
+  margin: 0 0.8em 0.5em;
   font-size: 1.5rem;
   color: #fff;
 }
@@ -149,7 +149,7 @@ input[type="text"] {
 
 @media (max-width: 768px) {
   .Option-container {
-    padding: 1em; /* Adjusted padding */
+    padding: 1em;
   }
   select,
   input[type="text"] {
@@ -159,8 +159,8 @@ input[type="text"] {
 
 @media (max-width: 480px) {
   .Option-container {
-    padding: 1em; /* Adjusted padding */
-    width: 90%; /* Adjusted width */
+    padding: 1em;
+    width: 90%;
   }
   .X-divider {
     margin: 0 1em 0.5em;
@@ -171,7 +171,7 @@ input[type="text"] {
   }
   .Add-Workout,
   .Remove-Workout {
-    padding-left: 1em; /* Adjusted padding */
+    padding-left: 1em;
     margin-top: 0;
   }
 }
