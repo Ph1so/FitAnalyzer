@@ -37,9 +37,8 @@
   font-size: 1.2em;
   background-color: transparent;
   border: none;
-  padding-left: 1em;
-  margin-left: 1em;
   margin-bottom: 0.2em;
+  margin-right: -0.2em;
 }
 
 .Add-Workout:hover,
