@@ -20,7 +20,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/workout" element={<WorkoutPage />} />
+            <Route path="/planner" element={<WorkoutPage />} />
             <Route path="/analysis" element={<AnalysisPage />} />
             <Route path="/waitlist" element={<WaitlistPage />} />
           </Routes>

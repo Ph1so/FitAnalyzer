@@ -22,7 +22,7 @@ const Navbar = () => {
         ☰
       </button>
       <div className={`icon-container ${isOpen ? "open" : ""}`}>
-        <Link to="/workout" className="navbar-links" onClick={closeMenu}>
+        <Link to="/planner" className="navbar-links" onClick={closeMenu}>
           Planner
         </Link>
         <Link to="/analysis" className="navbar-links" onClick={closeMenu}>
