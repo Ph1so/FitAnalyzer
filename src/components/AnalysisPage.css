@@ -7,20 +7,25 @@
 }
 
 .content {
-  flex: 1; /* This will push the footer to the bottom */
+  flex: 1; /* This will push the footer to the bottm */
   padding: 20px;
   position: relative;
 }
 
 footer.source {
   padding: 10px;
-  background-color: rgba(51, 51, 51, 0.8); /* Light grey background for the footer */
+  background-color: rgba(
+    51,
+    51,
+    51,
+    0.8
+  ); /* Light grey background for the footer */
   text-align: center; /* Center align the text */
 }
 
 .Title2-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   font-family: "Rubik", sans-serif;
   justify-content: center;
   align-items: center;
@@ -35,7 +40,7 @@ footer.source {
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }
 .Title2 {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   font-size: 5.5em;
@@ -44,18 +49,16 @@ footer.source {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  margin-bottom: .2em;
+  margin-bottom: 0.2em;
   margin-top: 1.5em;
-
 }
 
 .Title2-container p {
-  font-size: .7em;
+  font-size: 0.7em;
   text-align: center; /* Center the paragraph */
   margin-top: 0; /* Ensure there's no extra space above the paragraph */
   color: #cccccc;
 }
-
 
 .source p {
   margin: 0;
@@ -64,7 +67,7 @@ footer.source {
 }
 
 .source a {
-  color: #007BFF; /* Blue color for the link */
+  color: #007bff; /* Blue color for the link */
   text-decoration: none;
 }
 
