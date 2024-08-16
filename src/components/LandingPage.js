@@ -7,7 +7,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleContinue = () => {
-    navigate("/workout");
+    navigate("/planner");
   };
 
   return (
