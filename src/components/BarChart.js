@@ -171,7 +171,7 @@ const BarChart = () => {
   useEffect(() => {
     setWarnings({
       considerMore: [
-        setsPerMuscleGroup.chest > 16 ? 'Chest' : '',
+        setsPerMuscleGroup.chest < 16 ? 'Chest' : '',
         setsPerMuscleGroup.back < 12 ? 'Back' : '',
         setsPerMuscleGroup.biceps < 5 ? 'Biceps' : '',
         setsPerMuscleGroup.triceps < 5 ? 'Triceps' : '',
