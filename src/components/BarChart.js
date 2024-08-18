@@ -64,16 +64,29 @@ const BarChart = () => {
         // Combine results for back muscles
         const allBackExercises = [...results[0], ...results[1], ...results[2]]; // Lats, lower_back, middle_back
 
-        // Add manually "Lat-pulldown" exercise
+        // Add manually back exercises
         const latPulldown = { name: 'Lat Pulldown', muscle: 'lats' };
         allBackExercises.push(latPulldown);
 
-        // Add manually "preacher-curl" exercise
+        // Add manually bicep exercises
         const preacherCurl = { name: 'Preacher Curl', muscle: 'biceps' };
         results[5].push(preacherCurl);
 
+        // Add manually tricep exercises
         const tricepPushdown = { name: 'Tricep Pushdown', muscle: 'triceps' };
         results[6].push(tricepPushdown);
+
+         // Add manually chest exercises
+        const cableFly = { name: 'Cable Fly', muscle: 'chest' };
+        results[7].push(cableFly);
+
+         // Add manually hamstring exercises
+        const legCurl = { name: 'Leg Curl', muscle: 'hamstring' };
+        results[4].push(legCurl)
+
+         // Add manually quad exercises
+        const legPress = { name: 'Leg Press', muscle: 'quad' };
+        results[3].push(legPress)
 
         // Set state with results
         setExerciseData({
