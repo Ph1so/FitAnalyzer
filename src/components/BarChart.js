@@ -67,26 +67,52 @@ const BarChart = () => {
         // Add manually back exercises
         const latPulldown = { name: 'Lat Pulldown', muscle: 'lats' };
         allBackExercises.push(latPulldown);
+        const latPullaround = { name: 'Lat Pullaround', muscle: 'lats' };
+        allBackExercises.push(latPullaround);
+        const machineRow = { name: 'Machine Row', muscle: 'lats' };
+        allBackExercises.push(machineRow);
 
         // Add manually bicep exercises
         const preacherCurl = { name: 'Preacher Curl', muscle: 'biceps' };
         results[5].push(preacherCurl);
+        const cableCurl = { name: 'Cable Curl', muscle: 'biceps' };
+        results[5].push(cableCurl);
 
         // Add manually tricep exercises
         const tricepPushdown = { name: 'Tricep Pushdown', muscle: 'triceps' };
         results[6].push(tricepPushdown);
+        const tricepKickback = { name: 'Tricep Kickback', muscle: 'triceps' };
+        results[6].push(tricepKickback);
+        const tricepExtensions = { name: 'Tricep Extensions', muscle: 'triceps' };
+        results[6].push(tricepExtensions);
+        const tricepPulldown = { name: 'Tricep Pulldown', muscle: 'triceps' };
+        results[6].push(tricepPulldown);
 
          // Add manually chest exercises
         const cableFly = { name: 'Cable Fly', muscle: 'chest' };
         results[7].push(cableFly);
+        const machinePress = { name: 'Machine Press', muscle: 'chest' };
+        results[7].push(machinePress);
+        const pecDeck = { name: 'Pec Deck', muscle: 'chest' };
+        results[7].push(pecDeck);
+        const inclineBenchPress = { name: 'Incline Bench Press', muscle: 'chest' };
+        results[7].push(inclineBenchPress);
 
          // Add manually hamstring exercises
         const legCurl = { name: 'Leg Curl', muscle: 'hamstring' };
         results[4].push(legCurl)
+        const rdl = { name: 'RDL', muscle: 'hamstring' };
+        results[4].push(rdl)
 
          // Add manually quad exercises
         const legPress = { name: 'Leg Press', muscle: 'quad' };
         results[3].push(legPress)
+        const sissySquat = { name: 'Sissy Squat', muscle: 'quad' };
+        results[3].push(sissySquat)
+        const hackSquat = { name: 'Hack Squat', muscle: 'quad' };
+        results[3].push(hackSquat)
+        const legExtension = { name: 'Leg Extension', muscle: 'quad' };
+        results[3].push(legExtension)
 
         // Set state with results
         setExerciseData({
@@ -188,7 +214,7 @@ const BarChart = () => {
         setsPerMuscleGroup.back < 12 ? 'Back' : '',
         setsPerMuscleGroup.biceps < 5 ? 'Biceps' : '',
         setsPerMuscleGroup.triceps < 5 ? 'Triceps' : '',
-        setsPerMuscleGroup.hamstrings < 12 ? 'Hamstrings' : '',
+        setsPerMuscleGroup.hamstrings < 10 ? 'Hamstrings' : '',
         setsPerMuscleGroup.quads < 12 ? 'Quads' : '',
         setsPerMuscleGroup.calves < 5 ? 'Calves' : '',
       ].filter(Boolean).join(', '),
@@ -197,7 +223,7 @@ const BarChart = () => {
         setsPerMuscleGroup.back > 16 ? 'Back' : '',
         setsPerMuscleGroup.biceps > 9 ? 'Biceps' : '',
         setsPerMuscleGroup.triceps > 9 ? 'Triceps' : '',
-        setsPerMuscleGroup.hamstrings > 16 ? 'Hamstrings' : '',
+        setsPerMuscleGroup.hamstrings > 14 ? 'Hamstrings' : '',
         setsPerMuscleGroup.quads > 16 ? 'Quads' : '',
         setsPerMuscleGroup.calves > 9 ? 'Calves' : '',
       ].filter(Boolean).join(', '),
